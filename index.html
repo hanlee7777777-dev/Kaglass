@@ -1249,9 +1249,188 @@ border-radius:24px!important;
 }
 
 
-/* 최종 수정: '사진 한 장이면 상담이 시작됩니다.' 글자색 */
+/* =========================
+   KAGLASS MASTER v1.0
+   ========================= */
+
+/* 전체 톤 */
+body{
+  background:#F6F7F9!important;
+}
+.mobile{
+  background:#F6F7F9!important;
+}
+
+/* 공통 카드 느낌 */
+.quick,
+.cases,
+.fleetSection{
+  background:#F6F7F9!important;
+}
+.formCard,
+.stepCard,
+.caseCard,
+.noticeBox,
+.fleetHero,
+.carTypes div{
+  background:#fff!important;
+}
+
+/* 상담 버튼 영역 */
+.quick{
+  padding:28px 18px 12px!important;
+}
 .quick h2{
-  color:#5F6B7A !important;
+  color:#4F5B67!important;
+  font-weight:850!important;
+  letter-spacing:-1.6px!important;
+}
+.quick p{
+  color:#6A7480!important;
+}
+
+/* CTA 버튼 최종 통일 */
+.ctaCards{
+  gap:10px!important;
+}
+.ctaCard{
+  height:68px!important;
+  padding:0 16px!important;
+  border-radius:16px!important;
+  grid-template-columns:34px minmax(0,1fr) 1px auto!important;
+  column-gap:10px!important;
+  box-shadow:0 8px 18px rgba(6,26,51,.09)!important;
+}
+.ctaIcon{
+  width:34px!important;
+  height:34px!important;
+}
+.ctaTel .phone{
+  font-size:24px!important;
+}
+.ctaKakao .talk,
+.ctaBlog .dot{
+  width:32px!important;
+  height:32px!important;
+}
+.ctaKakao .talk{
+  font-size:10px!important;
+}
+.ctaWarranty .shield{
+  font-size:24px!important;
+}
+.ctaCard strong{
+  font-size:20px!important;
+  font-weight:800!important;
+  letter-spacing:-.8px!important;
+}
+.ctaCard em{
+  font-size:13px!important;
+  font-weight:700!important;
+}
+.ctaCard .divider{
+  height:26px!important;
+}
+
+/* 간편 접수 3단계 */
+.simpleSteps{
+  padding:12px 18px 34px!important;
+  background:linear-gradient(180deg,#F6F7F9 0%,#F8FBFF 42%,#EDF5FF 100%)!important;
+  border-radius:0!important;
+}
+.simpleSteps::before{
+  display:none!important;
+}
+.simpleSteps h2{
+  display:block!important;
+  width:fit-content!important;
+  max-width:92%!important;
+  margin:0 auto 16px!important;
+  padding:16px 32px 22px!important;
+  border-radius:22px!important;
+  background:linear-gradient(180deg,#FCFDFF 0%,#EEF7FF 100%)!important;
+  border:1px solid rgba(90,170,255,.38)!important;
+  box-shadow:0 10px 24px rgba(10,60,110,.10)!important;
+  color:#0B2745!important;
+  font-weight:800!important;
+  letter-spacing:-1.5px!important;
+}
+.simpleSteps h2::after{
+  margin-top:14px!important;
+  box-shadow:0 0 12px rgba(8,105,232,.32)!important;
+}
+.simpleSteps .sub{
+  margin:0 0 22px!important;
+  color:#5F6B7A!important;
+  font-weight:900!important;
+}
+
+/* STEP 카드 고급감 */
+.stepCard{
+  background:#fff!important;
+  border:1px solid rgba(210,224,240,.95)!important;
+  box-shadow:0 12px 28px rgba(6,26,51,.08)!important;
+}
+.stepBadge{
+  background:linear-gradient(180deg,#EAFBFF,#DDF4F7)!important;
+  color:#1E7482!important;
+}
+.stepIcon{
+  background:linear-gradient(135deg,#123B67,#061A33)!important;
+}
+
+/* 복원 전 확인 박스 */
+.noticeBox{
+  background:linear-gradient(180deg,#FFFBF2,#FFF7E8)!important;
+  border:1.5px solid #EFD19A!important;
+  box-shadow:0 12px 26px rgba(154,104,16,.08)!important;
+}
+
+/* 상단 평생보증 배지 */
+.hero .badgeTop{
+  transform:scale(1.10)!important;
+  transform-origin:left center!important;
+  margin-left:2px!important;
+  margin-bottom:6px!important;
+}
+
+/* 하단 고정 버튼 */
+.bottom{
+  background:rgba(255,255,255,.96)!important;
+  box-shadow:0 -10px 24px rgba(6,26,51,.08)!important;
+}
+.bottom a{
+  height:52px!important;
+  font-size:14px!important;
+  border-radius:14px!important;
+}
+
+/* 터치감 */
+a,
+button{
+  transition:transform .16s ease, box-shadow .16s ease, opacity .16s ease!important;
+}
+a:active,
+button:active{
+  transform:scale(.985)!important;
+}
+
+/* 모바일 좁은 화면 */
+@media(max-width:370px){
+  .quick h2{font-size:30px!important}
+  .ctaCard{
+    height:64px!important;
+    padding:0 13px!important;
+    grid-template-columns:32px minmax(0,1fr) 1px auto!important;
+    column-gap:9px!important;
+  }
+  .ctaIcon{width:32px!important;height:32px!important}
+  .ctaCard strong{font-size:18px!important}
+  .ctaCard em{font-size:12px!important}
+  .simpleSteps h2{
+    padding:14px 24px 20px!important;
+    font-size:28px!important;
+  }
 }
 
 </style>
