@@ -1250,69 +1250,61 @@ border-radius:24px!important;
 
 
 /* =========================================================
-   KAGLASS MASTER v2.0
-   Premium mobile landing final layer
+   KAGLASS MASTER v3.0
+   밝고 고급스러운 프리미엄 톤 최종 레이어
    ========================================================= */
-
 :root{
-  --kg-bg:#F5F6F8;
+  --kg-bg:#F3F5F7;
   --kg-card:#FFFFFF;
   --kg-navy:#061A33;
-  --kg-blue:#0869E8;
-  --kg-blue-soft:#EEF6FF;
-  --kg-text:#0F2238;
+  --kg-blue:#075FE3;
+  --kg-blue-deep:#0647AE;
+  --kg-text:#102235;
   --kg-muted:#5F6B7A;
   --kg-line:rgba(15,35,60,.08);
-  --kg-shadow:0 14px 34px rgba(6,26,51,.10);
-  --kg-shadow-soft:0 8px 22px rgba(6,26,51,.075);
+  --kg-shadow:0 14px 32px rgba(6,26,51,.085);
+  --kg-shadow-soft:0 8px 20px rgba(6,26,51,.065);
 }
-
 html,body{
   background:var(--kg-bg)!important;
 }
-
 .mobile{
   background:var(--kg-bg)!important;
-  box-shadow:0 0 34px rgba(0,0,0,.14)!important;
+  box-shadow:0 0 34px rgba(0,0,0,.13)!important;
 }
-
-/* 상단 */
 .top{
-  background:rgba(255,255,255,.92)!important;
+  background:rgba(255,255,255,.90)!important;
   border-bottom:1px solid rgba(15,35,60,.08)!important;
-  box-shadow:0 6px 18px rgba(6,26,51,.045)!important;
+  box-shadow:0 8px 20px rgba(6,26,51,.045)!important;
+  backdrop-filter:blur(18px)!important;
 }
-
-/* 메인 배너는 유지, 배지만 고급감 */
+.top a{
+  background:linear-gradient(135deg,#075FE3,#0647AE)!important;
+  box-shadow:0 8px 18px rgba(7,95,227,.24)!important;
+}
 .hero .badgeTop{
   transform:scale(1.08)!important;
   transform-origin:left center!important;
   background:rgba(6,26,51,.62)!important;
-  border:1px solid rgba(255,255,255,.30)!important;
+  border:1px solid rgba(255,255,255,.32)!important;
   box-shadow:0 8px 22px rgba(0,0,0,.16)!important;
 }
-
-/* 상담 CTA 영역 */
 .quick{
   background:var(--kg-bg)!important;
   padding:28px 18px 10px!important;
 }
-
 .quick h2{
   color:#535F6C!important;
   font-weight:780!important;
   letter-spacing:-1.7px!important;
 }
-
 .quick p{
   color:#66717D!important;
   font-weight:780!important;
 }
-
 .ctaCards{
   gap:10px!important;
 }
-
 .ctaCard{
   height:68px!important;
   padding:0 16px!important;
@@ -1321,57 +1313,51 @@ html,body{
   column-gap:10px!important;
   box-shadow:var(--kg-shadow-soft)!important;
 }
-
 .ctaIcon{
   width:34px!important;
   height:34px!important;
 }
-
+.ctaTel{
+  background:linear-gradient(135deg,#075FE3,#0647AE)!important;
+}
 .ctaTel .phone{
   font-size:24px!important;
 }
-
 .ctaKakao .talk,
 .ctaBlog .dot{
   width:32px!important;
   height:32px!important;
 }
-
 .ctaKakao .talk{
   font-size:10px!important;
 }
-
+.ctaWarranty{
+  background:linear-gradient(135deg,#082A49,#0A5A8C)!important;
+}
 .ctaWarranty .shield{
   font-size:24px!important;
 }
-
 .ctaCard strong{
   font-size:20px!important;
   font-weight:800!important;
   letter-spacing:-.8px!important;
 }
-
 .ctaCard em{
   font-size:13px!important;
   font-weight:700!important;
 }
-
 .ctaCard .divider{
   height:26px!important;
 }
-
-/* 간편 접수 3단계 */
 .simpleSteps{
   padding:10px 18px 34px!important;
-  background:linear-gradient(180deg,var(--kg-bg) 0%,#F8FBFF 45%,#EDF5FF 100%)!important;
+  background:linear-gradient(180deg,#F3F5F7 0%,#F8FBFF 46%,#EDF5FF 100%)!important;
   border-radius:0!important;
   overflow:hidden!important;
 }
-
 .simpleSteps::before{
   display:none!important;
 }
-
 .simpleSteps h2{
   display:block!important;
   width:fit-content!important;
@@ -1386,110 +1372,79 @@ html,body{
   font-weight:800!important;
   letter-spacing:-1.5px!important;
 }
-
 .simpleSteps h2::after{
   margin-top:14px!important;
   box-shadow:0 0 12px rgba(8,105,232,.32)!important;
 }
-
 .simpleSteps .sub{
   margin:0 0 22px!important;
-  color:var(--kg-muted)!important;
+  color:#5F6B7A!important;
   font-weight:900!important;
 }
-
 .stepCard{
   background:var(--kg-card)!important;
   border:1px solid rgba(200,216,232,.85)!important;
   box-shadow:var(--kg-shadow-soft)!important;
 }
-
 .stepBadge{
   background:linear-gradient(180deg,#EAFBFF,#DDF4F7)!important;
   color:#1E7482!important;
   box-shadow:inset 0 0 0 1px rgba(255,255,255,.75)!important;
 }
-
 .stepIcon{
   background:linear-gradient(135deg,#123B67,#061A33)!important;
   box-shadow:0 10px 22px rgba(6,26,51,.20)!important;
 }
-
 .stepText b{
   color:#123456!important;
 }
-
 .stepText p{
   color:#5E6A77!important;
 }
-
-/* 복원 전 확인 */
 .noticeBox{
   background:linear-gradient(180deg,#FFFCF4,#FFF7E8)!important;
   border:1.5px solid #EFD19A!important;
   box-shadow:0 12px 26px rgba(154,104,16,.08)!important;
 }
-
-/* 시공사례 */
 .cases,
 .fleetSection{
   background:var(--kg-bg)!important;
 }
-
-.cases h2,
-.fleetSection h2{
-  color:#0F2238!important;
-}
-
-.caseCard{
-  background:var(--kg-card)!important;
-  border:1px solid var(--kg-line)!important;
-  box-shadow:var(--kg-shadow-soft)!important;
-  border-radius:24px!important;
-}
-
-.caseImg{
-  border-radius:24px 24px 0 0!important;
-}
-
-.caseBody h3{
-  color:#12263D!important;
-}
-
-.caseBody p{
-  color:#5F6B7A!important;
-}
-
-/* 차량 가능 섹션 */
+.caseCard,
 .fleetHero,
 .carTypes div{
   background:var(--kg-card)!important;
+  border:1px solid var(--kg-line)!important;
   box-shadow:var(--kg-shadow-soft)!important;
 }
-
-/* 하단 고정 버튼 */
+.caseCard{
+  border-radius:24px!important;
+}
+.caseImg{
+  border-radius:24px 24px 0 0!important;
+}
+.caseBody h3{
+  color:#12263D!important;
+}
+.caseBody p{
+  color:#5F6B7A!important;
+}
 .bottom{
   background:rgba(255,255,255,.96)!important;
   border-top:1px solid rgba(15,35,60,.08)!important;
   box-shadow:0 -10px 24px rgba(6,26,51,.08)!important;
 }
-
 .bottom a{
   height:52px!important;
   font-size:14px!important;
   border-radius:14px!important;
 }
-
-/* 터치감 */
 a,button{
   transition:transform .16s ease,box-shadow .16s ease,opacity .16s ease!important;
 }
-
 a:active,button:active{
   transform:scale(.985)!important;
 }
-
-/* 좁은 모바일 */
 @media(max-width:370px){
   .quick h2{font-size:30px!important}
   .ctaCard{
