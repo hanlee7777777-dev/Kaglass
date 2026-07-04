@@ -1625,31 +1625,50 @@ section.simpleSteps .sub{
 </style>
 
 
-<style id="kg-bottom-three-animation">
+<style id="kg-bottom-same-as-phone">
+/* 하단 3개 버튼: 전화상담과 동일한 외곽 테두리 애니메이션 */
 .bottom a{
   position:relative!important;
   overflow:visible!important;
+  transform:none!important;
 }
-.bottom a::before{
+.bottom a::before,
+.bottom a::after{
   content:""!important;
   position:absolute!important;
-  inset:-6px!important;
-  border-radius:20px!important;
-  border:2px solid currentColor!important;
-  opacity:.18!important;
-  animation:kgBottomPulseAll 1.9s ease-in-out infinite!important;
+  inset:-4px!important;
+  border-radius:22px!important;
   pointer-events:none!important;
 }
-.bottom a:nth-child(2)::before{
-  animation-delay:.18s!important;
+.bottom a::before{
+  border:2px solid rgba(255,255,255,.55)!important;
+  box-shadow:0 0 0 0 rgba(255,255,255,.38)!important;
+  animation:kgPhoneSameRing 1.65s ease-in-out infinite!important;
 }
-.bottom a:nth-child(3)::before{
-  animation-delay:.36s!important;
+.bottom a::after{
+  border:1px solid rgba(255,255,255,.30)!important;
+  animation:kgPhoneSameGlow 1.65s ease-in-out infinite!important;
 }
-@keyframes kgBottomPulseAll{
-  0%{transform:scale(.96);opacity:.20}
-  50%{transform:scale(1.08);opacity:.05}
-  100%{transform:scale(.96);opacity:.20}
+.bottom a.bTel::before,
+.bottom a.bTel::after,
+.bottom a.bKakao::before,
+.bottom a.bKakao::after,
+.bottom a.bBlog::before,
+.bottom a.bBlog::after{
+  animation-delay:0s!important;
+}
+.bottom a:active{
+  transform:scale(.98)!important;
+}
+@keyframes kgPhoneSameRing{
+  0%{transform:scale(.98);opacity:.42}
+  50%{transform:scale(1.055);opacity:.13}
+  100%{transform:scale(.98);opacity:.42}
+}
+@keyframes kgPhoneSameGlow{
+  0%{transform:scale(1);opacity:.22}
+  50%{transform:scale(1.085);opacity:.06}
+  100%{transform:scale(1);opacity:.22}
 }
 </style>
 
