@@ -1464,87 +1464,7 @@ a:active,button:active{
 
 </style>
 
-<style id="kg-final-force">
-/* STEP 카드 강제 슬림화 */
-section.simpleSteps .stepCard{
-  padding:12px 14px!important;
-  margin:8px 0!important;
-  border-radius:17px!important;
-  box-shadow:0 6px 14px rgba(6,26,51,.05)!important;
-}
-section.simpleSteps .stepRow{
-  gap:10px!important;
-}
-section.simpleSteps .stepIcon{
-  width:46px!important;
-  height:46px!important;
-  min-width:46px!important;
-  border-radius:14px!important;
-  font-size:22px!important;
-}
-section.simpleSteps .stepBadge{
-  padding:4px 10px!important;
-  font-size:11px!important;
-  font-weight:600!important;
-  margin-bottom:8px!important;
-}
-section.simpleSteps .stepText b{
-  font-size:16px!important;
-  font-weight:620!important;
-  letter-spacing:-.3px!important;
-}
-section.simpleSteps .stepText p{
-  font-size:13px!important;
-  line-height:1.5!important;
-  font-weight:400!important;
-  color:#5F6B7A!important;
-  margin:4px 0 0!important;
-}
-section.simpleSteps .stepText p strong{
-  font-weight:560!important;
-}
 
-/* 간편 접수 제목/설명 얇게 */
-section.simpleSteps h2{
-  font-size:27px!important;
-  font-weight:620!important;
-}
-section.simpleSteps .sub{
-  font-size:15px!important;
-  font-weight:480!important;
-  color:#5F6B7A!important;
-}
-
-/* 평생보증서 문구: 전체 얇게, 평생보증서만 굵게 */
-.warrantyText,
-.warrantyText *,
-.guaranteeText,
-.guaranteeText *,
-.hero p,
-.hero .desc{
-  font-weight:500!important;
-}
-.kg-warranty-bold{
-  font-weight:800!important;
-}
-
-/* 전체 과한 굵기 완화 */
-.quick h2,
-.cases h2,
-.fleetSection h2{
-  font-weight:620!important;
-}
-.ctaCard strong,
-.caseBody h3,
-.fleetHero h3,
-.carTypes div b{
-  font-weight:620!important;
-}
-.ctaCard em,
-.caseBody p{
-  font-weight:430!important;
-}
-</style>
 
 
 <style id="promise-text-final-fix">
@@ -1560,24 +1480,56 @@ section.simpleSteps .sub{
 </style>
 
 
-<style id="kg-brand-text-final">
-.kgBrandTextFinal{
-  margin:14px 16px 18px!important;
-  padding:16px 14px!important;
+<style id="kg-hard-final">
+.carTypes{
+  display:grid!important;
+  grid-template-columns:repeat(3,1fr)!important;
+  gap:10px!important;
+  padding:0 16px!important;
+  margin:16px 0 18px!important;
+}
+.carTypes div{
+  height:86px!important;
+  border-radius:18px!important;
+  background:#fff!important;
+  box-shadow:0 6px 14px rgba(6,26,51,.065)!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  color:#092642!important;
+}
+.carTypes .vIcon{
+  display:block!important;
+  font-size:28px!important;
+  line-height:1!important;
+  margin-bottom:6px!important;
+}
+.carTypes b{
+  display:block!important;
+  font-size:22px!important;
+  line-height:1.1!important;
+  font-weight:800!important;
+  letter-spacing:-.6px!important;
+}
+.fleetNotice{
+  margin:16px 16px 22px!important;
+  padding:15px 12px!important;
   border-radius:20px!important;
-  background:#EAF5FF!important;
+  background:#eaf5ff!important;
   text-align:center!important;
-  color:#102946!important;
   box-shadow:0 8px 18px rgba(6,26,51,.045)!important;
 }
-.kgBrandTextFinal span{
+.fleetNotice span,
+.fleetNotice strong{
   display:block!important;
-  font-size:18px!important;
-  line-height:1.38!important;
+  color:#102946!important;
+  font-size:16px!important;
+  line-height:1.42!important;
   font-weight:700!important;
   letter-spacing:-.35px!important;
-  white-space:normal!important;
 }
+.fleetNotice strong{margin-top:4px!important;}
 </style>
 
 </head>
@@ -1741,21 +1693,20 @@ section.simpleSteps .sub{
   </div>
 
   <div class="carTypes">
-    <div>슈퍼카</div>
-    <div>수입차</div>
-    <div>국산차</div>
-    <div>SUV</div>
-    <div>RV</div>
-    <div>경차·모닝</div>
+    <div><span class="vIcon">💎</span><b>슈퍼카</b></div>
+    <div><span class="vIcon">🚘</span><b>수입차</b></div>
+    <div><span class="vIcon">🛡️</span><b>국산차</b></div>
+    <div><span class="vIcon">🚙</span><b>SUV</b></div>
+    <div><span class="vIcon">🚐</span><b>RV</b></div>
+    <div><span class="vIcon">⚙️</span><b>경차·모닝</b></div>
   </div>
 
   <p class="fleetNotice">
-<div class="kgBrandTextFinal">
   <span>Ferrari · Lamborghini · Porsche · Mercedes-Benz</span>
   <span>BMW · Bentley · Rolls-Royce · Maserati</span>
-  <span>Aston Martin · McLaren · Audi · Lexus · Genesis</span>
-  <span>Tesla · Volvo · Hyundai · Kia 등 전 차종 상담 가능합니다.</span>
-</div>
+  <span>Aston Martin · McLaren · Audi · Lexus</span>
+  <span>Genesis · Tesla · Volvo · Hyundai · Kia</span>
+  <strong>등 전 차종 상담 가능합니다.</strong>
 </p>
 </section>
 
