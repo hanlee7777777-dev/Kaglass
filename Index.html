@@ -1560,35 +1560,41 @@ section.simpleSteps .sub{
 </style>
 
 
-<style id="kg-final-vehicle-brand">
-.kgVehicleFinal{
+<style id="kg-final-direct-fix">
+.carTypes{
   display:grid!important;
   grid-template-columns:repeat(3,1fr)!important;
   gap:10px!important;
   padding:0 16px!important;
   margin:16px 0 18px!important;
 }
-.kgVehicleFinal div{
-  height:82px!important;
+.carTypes div{
+  height:86px!important;
   border-radius:18px!important;
   background:#fff!important;
-  box-shadow:0 6px 14px rgba(6,26,51,.07)!important;
+  box-shadow:0 6px 14px rgba(6,26,51,.065)!important;
   display:flex!important;
   flex-direction:column!important;
   align-items:center!important;
   justify-content:center!important;
-  gap:6px!important;
-}
-.kgVehicleFinal span{
-  font-size:25px!important;
-  line-height:1!important;
-}
-.kgVehicleFinal b{
   color:#092642!important;
-  font-size:21px!important;
+  font-size:22px!important;
   font-weight:800!important;
   letter-spacing:-.6px!important;
 }
+.carTypes div::before{
+  display:block!important;
+  font-size:27px!important;
+  line-height:1!important;
+  margin-bottom:6px!important;
+}
+.carTypes div:nth-child(1)::before{content:"💎";}
+.carTypes div:nth-child(2)::before{content:"🚘";}
+.carTypes div:nth-child(3)::before{content:"🛡️";}
+.carTypes div:nth-child(4)::before{content:"🚙";}
+.carTypes div:nth-child(5)::before{content:"🚐";}
+.carTypes div:nth-child(6)::before{content:"⚙️";}
+
 .kgBrandTextFinal{
   margin:16px 16px 22px!important;
   padding:15px 12px!important;
@@ -1605,11 +1611,8 @@ section.simpleSteps .sub{
   line-height:1.42!important;
   font-weight:700!important;
   letter-spacing:-.35px!important;
-  white-space:nowrap!important;
 }
-.kgBrandTextFinal strong{
-  margin-top:4px!important;
-}
+.kgBrandTextFinal strong{margin-top:4px!important;}
 </style>
 
 </head>
@@ -1772,26 +1775,22 @@ section.simpleSteps .sub{
     </div>
   </div>
 
-  
-<div class="carTypes kgVehicleFinal">
-  <div><span>💎</span><b>슈퍼카</b></div>
-  <div><span>🚘</span><b>수입차</b></div>
-  <div><span>🛡️</span><b>국산차</b></div>
-  <div><span>🚙</span><b>SUV</b></div>
-  <div><span>🚐</span><b>RV</b></div>
-  <div><span>⚙️</span><b>경차·모닝</b></div>
-</div>
+  <div class="carTypes">
+    <div>슈퍼카</div>
+    <div>수입차</div>
+    <div>국산차</div>
+    <div>SUV</div>
+    <div>RV</div>
+    <div>경차·모닝</div>
+  </div>
 
-
-  
-<p class="fleetNotice kgBrandTextFinal">
-  <span>Ferrari · Lamborghini · Porsche · Mercedes-Benz</span>
-  <span>BMW · Bentley · Rolls-Royce · Maserati</span>
-  <span>Aston Martin · McLaren · Audi · Lexus</span>
-  <span>Genesis · Tesla · Volvo · Hyundai · Kia</span>
-  <strong>등 전 차종 상담 가능합니다.</strong>
+  <p class="fleetNotice kgBrandTextFinal">
+<span>Ferrari · Lamborghini · Porsche · Mercedes-Benz</span>
+<span>BMW · Bentley · Rolls-Royce · Maserati</span>
+<span>Aston Martin · McLaren · Audi · Lexus</span>
+<span>Genesis · Tesla · Volvo · Hyundai · Kia</span>
+<strong>등 전 차종 상담 가능합니다.</strong>
 </p>
-
 </section>
 
 <section class="finalCta reveal">
