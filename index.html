@@ -1624,6 +1624,35 @@ section.simpleSteps .sub{
 }
 </style>
 
+
+<style id="kg-bottom-three-animation">
+.bottom a{
+  position:relative!important;
+  overflow:visible!important;
+}
+.bottom a::before{
+  content:""!important;
+  position:absolute!important;
+  inset:-6px!important;
+  border-radius:20px!important;
+  border:2px solid currentColor!important;
+  opacity:.18!important;
+  animation:kgBottomPulseAll 1.9s ease-in-out infinite!important;
+  pointer-events:none!important;
+}
+.bottom a:nth-child(2)::before{
+  animation-delay:.18s!important;
+}
+.bottom a:nth-child(3)::before{
+  animation-delay:.36s!important;
+}
+@keyframes kgBottomPulseAll{
+  0%{transform:scale(.96);opacity:.20}
+  50%{transform:scale(1.08);opacity:.05}
+  100%{transform:scale(.96);opacity:.20}
+}
+</style>
+
 </head>
 <body>
 <main class="mobile">
