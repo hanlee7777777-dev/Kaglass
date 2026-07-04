@@ -1559,6 +1559,71 @@ section.simpleSteps .sub{
 }
 </style>
 
+
+<style id="kg-restore-target-fleet">
+.carTypes{
+  display:grid!important;
+  grid-template-columns:repeat(3,1fr)!important;
+  gap:14px!important;
+  margin-top:18px!important;
+}
+.carTypes div{
+  height:126px!important;
+  border-radius:22px!important;
+  background:#fff!important;
+  border:1px solid rgba(220,232,244,.95)!important;
+  box-shadow:0 8px 18px rgba(6,26,51,.06)!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  text-align:center!important;
+  padding:10px 5px!important;
+}
+.carTypes .vIcon{
+  display:block!important;
+  font-size:34px!important;
+  line-height:1!important;
+  margin-bottom:10px!important;
+}
+.carTypes b{
+  display:block!important;
+  color:#092642!important;
+  font-size:28px!important;
+  font-weight:900!important;
+  letter-spacing:-1.1px!important;
+  line-height:1.02!important;
+}
+.fleetNotice{
+  margin:22px 0 8px!important;
+  padding:24px 14px!important;
+  border-radius:24px!important;
+  background:#eaf5ff!important;
+  text-align:center!important;
+  color:#102946!important;
+  box-shadow:0 8px 18px rgba(6,26,51,.04)!important;
+}
+.fleetNotice span,
+.fleetNotice strong{
+  display:block!important;
+  color:#102946!important;
+  font-size:22px!important;
+  line-height:1.45!important;
+  font-weight:800!important;
+  letter-spacing:-.6px!important;
+}
+.fleetNotice strong{
+  margin-top:12px!important;
+  font-size:23px!important;
+}
+@media(max-width:370px){
+  .carTypes div{height:116px!important}
+  .carTypes .vIcon{font-size:30px!important}
+  .carTypes b{font-size:24px!important}
+  .fleetNotice span,.fleetNotice strong{font-size:19px!important}
+}
+</style>
+
 </head>
 <body>
 <main class="mobile">
@@ -1720,15 +1785,21 @@ section.simpleSteps .sub{
   </div>
 
   <div class="carTypes">
-    <div>슈퍼카</div>
-    <div>수입차</div>
-    <div>국산차</div>
-    <div>SUV</div>
-    <div>RV</div>
-    <div>경차·모닝</div>
+    <div><span class="vIcon">💎</span><b>슈퍼카</b></div>
+    <div><span class="vIcon">🚘</span><b>수입차</b></div>
+    <div><span class="vIcon">🛡️</span><b>국산차</b></div>
+    <div><span class="vIcon">🚙</span><b>SUV</b></div>
+    <div><span class="vIcon">🚐</span><b>RV</b></div>
+    <div><span class="vIcon">⚙️</span><b>경차·모닝</b></div>
   </div>
 
-  <p class="fleetNotice">Ferrari · Lamborghini · Porsche · Mercedes-Benz · BMW · Genesis · Hyundai · Kia 등 전 차종 상담 가능합니다.</p>
+  <p class="fleetNotice">
+    <span>Ferrari · Lamborghini · Porsche · Mercedes-Benz</span>
+    <span>BMW · Bentley · Rolls-Royce · Maserati</span>
+    <span>Aston Martin · McLaren · Audi · Lexus</span>
+    <span>Genesis · Tesla · Volvo · Hyundai · Kia</span>
+    <strong>등 전 차종 상담 가능합니다.</strong>
+  </p>
 </section>
 
 <section class="finalCta reveal">
