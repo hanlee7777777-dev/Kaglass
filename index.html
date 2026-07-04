@@ -1559,102 +1559,6 @@ section.simpleSteps .sub{
 }
 </style>
 
-
-<style id="kg-bottom-final-text-only">
-/* 하단 고정 상담 버튼 최종: 글씨만 + 3개 동일 애니메이션 */
-.kgBottomFinal{
-  position:fixed!important;
-  left:50%!important;
-  bottom:0!important;
-  transform:translateX(-50%)!important;
-  z-index:9999!important;
-  width:100%!important;
-  max-width:430px!important;
-  display:grid!important;
-  grid-template-columns:repeat(3,1fr)!important;
-  gap:10px!important;
-  padding:10px 10px 12px!important;
-  background:rgba(255,255,255,.96)!important;
-  backdrop-filter:blur(12px)!important;
-  border-top:1px solid rgba(6,26,51,.08)!important;
-}
-.kgBottomFinal a{
-  position:relative!important;
-  overflow:hidden!important;
-  height:58px!important;
-  border-radius:16px!important;
-  display:flex!important;
-  align-items:center!important;
-  justify-content:center!important;
-  text-decoration:none!important;
-  font-size:18px!important;
-  font-weight:850!important;
-  letter-spacing:-.7px!important;
-  white-space:nowrap!important;
-  box-shadow:0 8px 18px rgba(6,26,51,.12)!important;
-}
-.kgBottomFinal a::before{
-  content:""!important;
-  position:absolute!important;
-  inset:-18px!important;
-  border-radius:999px!important;
-  border:2px solid currentColor!important;
-  opacity:.16!important;
-  animation:kgBottomPulse 1.9s ease-in-out infinite!important;
-}
-.kgBottomFinal a::after{
-  content:""!important;
-  position:absolute!important;
-  inset:0!important;
-  border-radius:16px!important;
-  box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)!important;
-  pointer-events:none!important;
-}
-.kgBottomFinal .bTel{
-  background:linear-gradient(135deg,#0b72f0,#064cb8)!important;
-  color:#fff!important;
-}
-.kgBottomFinal .bKakao{
-  background:linear-gradient(135deg,#ffdf00,#ffc400)!important;
-  color:#151515!important;
-}
-.kgBottomFinal .bBlog{
-  background:linear-gradient(135deg,#04b64a,#039737)!important;
-  color:#fff!important;
-}
-.kgBottomFinal a:active{
-  transform:scale(.97)!important;
-}
-@keyframes kgBottomPulse{
-  0%{transform:scale(.92);opacity:.18}
-  50%{transform:scale(1.08);opacity:.05}
-  100%{transform:scale(.92);opacity:.18}
-}
-
-/* 본문 상담 버튼도 글씨 중심으로 정리 */
-.ctaCard{
-  position:relative!important;
-  overflow:hidden!important;
-}
-.ctaCard::after{
-  content:""!important;
-  position:absolute!important;
-  inset:-5px!important;
-  border-radius:24px!important;
-  border:2px solid currentColor!important;
-  opacity:.13!important;
-  animation:kgBottomPulse 1.9s ease-in-out infinite!important;
-}
-.ctaCard strong{
-  font-size:22px!important;
-  font-weight:850!important;
-  letter-spacing:-.8px!important;
-}
-.ctaCard em,.ctaCard .ctaIcon,.ctaCard .divider{
-  display:none!important;
-}
-</style>
-
 </head>
 <body>
 <main class="mobile">
@@ -1709,31 +1613,31 @@ section.simpleSteps .sub{
 
   <div class="ctaCards">
     <a class="ctaCard ctaTel" href="tel:01050687232">
-      
+      <span class="ctaIcon phone">☎</span>
       <strong>전화 상담</strong>
       <span class="divider"></span>
-      
+      <em>바로 연결</em>
     </a>
 
     <a class="ctaCard ctaKakao" href="tel:01050687232">
-      
+      <span class="ctaIcon talk">TALK</span>
       <strong>카카오톡 상담</strong>
       <span class="divider dark"></span>
-      
+      <em>바로가기</em>
     </a>
 
     <a class="ctaCard ctaBlog" href="https://m.blog.naver.com/carglass_" target="_blank" rel="noopener">
-      
-      <strong>네이버블로그</strong>
+      <span class="ctaIcon dot"></span>
+      <strong>시공사례</strong>
       <span class="divider"></span>
-      
+      <em>네이버블로그</em>
     </a>
 
     <a class="ctaCard ctaWarranty" href="https://m.blog.naver.com/carglass_/222179968451" target="_blank" rel="noopener">
       <span class="ctaIcon shield">🛡️</span>
       <strong>평생보증서</strong>
       <span class="divider"></span>
-      
+      <em>바로가기</em>
     </a>
   </div>
 </section>
@@ -1834,10 +1738,10 @@ section.simpleSteps .sub{
   <a class="blog" href="https://m.blog.naver.com/carglass_" target="_blank">🟢 블로그 시공사례 보기</a>
 </section>
 
-<nav class="bottom kgBottomFinal">
-  <a class="bTel" href="tel:01050687232">전화 상담</a>
-  <a class="bKakao" href="tel:01050687232">카카오톡 상담</a>
-  <a class="bBlog" href="https://m.blog.naver.com/carglass_" target="_blank" rel="noopener">네이버블로그</a>
+<nav class="bottom">
+  <a class="bTel" href="tel:01050687232">전화상담</a>
+  <a class="bKakao" href="tel:01050687232">카카오톡상담</a>
+  <a class="bBlog" href="https://m.blog.naver.com/carglass_" target="_blank">네이버블로그</a>
 </nav>
 </main>
 
