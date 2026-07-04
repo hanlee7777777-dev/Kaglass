@@ -37,7 +37,7 @@ url('data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAA
 .heroBtns a{height:56px;border-radius:14px;text-decoration:none;display:flex;align-items:center;justify-content:center;font-weight:1000;font-size:18px}
 .heroBtns .primary{background:#fff;color:#082243}
 .heroBtns .tel{background:#0869e8;color:#fff;box-shadow:0 8px 20px rgba(8,105,232,.38)}
-.heroBtns .blog{background:#05a63b;color:#fff}
+.heroBtns .{background:#05a63b;color:#fff}
 .stats{position:relative;margin-top:16px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .stats div{background:linear-gradient(180deg,rgba(255,255,255,.98),rgba(238,247,255,.94));border:1px solid rgba(255,255,255,.9);border-radius:18px;padding:16px 6px 14px;text-align:center;backdrop-filter:blur(10px);box-shadow:0 10px 26px rgba(0,80,180,.18);animation:softFloat 3.2s ease-in-out infinite;min-height:118px;display:flex;flex-direction:column;align-items:center;justify-content:center}
 .stats b{display:block;font-size:20px;color:#075ed6;line-height:1.15;text-shadow:none;font-weight:1000;letter-spacing:-.5px}
@@ -88,7 +88,7 @@ url('data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAA
 .finalCta h2{font-size:35px;letter-spacing:-2px;line-height:1.15;margin:0 0 13px}
 .finalCta p{color:#dbe9fb;font-size:15px;font-weight:750;line-height:1.6;margin:0 0 18px}
 .finalCta a{display:flex;height:58px;align-items:center;justify-content:center;margin:10px 0;border-radius:16px;text-decoration:none;font-size:19px;font-weight:1000}
-.finalCta .tel{background:#0869e8;color:#fff}.finalCta .blog{background:#05a63b;color:#fff}
+.finalCta .tel{background:#0869e8;color:#fff}.finalCta .{background:#05a63b;color:#fff}
 
 .bottom{position:fixed;left:50%;bottom:0;transform:translateX(-50%);width:100%;max-width:430px;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px;padding:9px 9px 10px;border-top:1px solid #dce5ef;z-index:80}
 .bottom a{text-decoration:none;color:#fff;height:55px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-weight:1000;font-size:15px}
@@ -1560,69 +1560,98 @@ section.simpleSteps .sub{
 </style>
 
 
-<style id="kg-final-exact-polish">
-.fleetSection{
-  padding-bottom:10px!important;
+<style id="kg-cta-final-korean">
+/* 상담 버튼 최종: 영문 삭제 + 한글 크기 통일 + 동일 애니메이션 */
+.ctaCards{
+  gap:12px!important;
 }
-.kgCarTypesFinal{
-  display:grid!important;
-  grid-template-columns:repeat(3,1fr)!important;
-  gap:10px!important;
-  margin-top:14px!important;
-}
-.kgCarTypesFinal div{
-  height:84px!important;
-  padding:0!important;
+.ctaCard{
+  position:relative!important;
+  overflow:visible!important;
+  height:76px!important;
   border-radius:18px!important;
-  background:#fff!important;
-  border:1px solid rgba(180,205,230,.75)!important;
-  box-shadow:0 6px 14px rgba(6,26,51,.055)!important;
+  padding:0 18px!important;
+  grid-template-columns:42px minmax(0,1fr) 1px auto!important;
+  column-gap:12px!important;
+  box-shadow:0 10px 22px rgba(6,26,51,.11)!important;
+}
+.ctaCard::after{
+  content:""!important;
+  position:absolute!important;
+  inset:-4px!important;
+  border-radius:22px!important;
+  border:2px solid currentColor!important;
+  opacity:.16!important;
+  animation:kgCtaPulse 1.9s ease-in-out infinite!important;
+  pointer-events:none!important;
+}
+.ctaIcon{
+  width:42px!important;
+  height:42px!important;
+  border-radius:50%!important;
   display:flex!important;
-  flex-direction:column!important;
   align-items:center!important;
   justify-content:center!important;
-  gap:6px!important;
-}
-.kgCarTypesFinal span{
-  display:block!important;
-  font-size:27px!important;
+  font-size:25px!important;
+  font-weight:800!important;
   line-height:1!important;
 }
-.kgCarTypesFinal b{
-  display:block!important;
-  color:#0b2a47!important;
-  font-size:22px!important;
+.ctaTel .phone{
+  font-size:27px!important;
+}
+.ctaKakao .talk{
+  width:42px!important;
+  height:42px!important;
+  font-size:24px!important;
+  background:#222!important;
+  color:#ffdf00!important;
+}
+.ctaBlog .dot{
+  width:42px!important;
+  height:42px!important;
+  font-size:25px!important;
+  font-weight:900!important;
+  color:#fff!important;
+  background:linear-gradient(180deg,#21d977,#05a63b)!important;
+}
+.ctaCard strong{
+  font-size:24px!important;
   font-weight:800!important;
-  letter-spacing:-.7px!important;
-  line-height:1.05!important;
-}
-.kgFleetNoticeFinal{
-  margin:12px 0 8px!important;
-  padding:14px 10px!important;
-  border-radius:18px!important;
-  background:#eaf5ff!important;
-  color:#102946!important;
-  font-size:16px!important;
-  font-weight:700!important;
-  line-height:1.38!important;
-  text-align:center!important;
-  box-shadow:0 6px 14px rgba(6,26,51,.04)!important;
-}
-.kgFleetNoticeFinal span,
-.kgFleetNoticeFinal strong{
-  display:block!important;
-  color:#102946!important;
-  font-size:16px!important;
-  line-height:1.38!important;
-  font-weight:700!important;
-  letter-spacing:-.35px!important;
+  line-height:1!important;
+  letter-spacing:-.9px!important;
   white-space:nowrap!important;
 }
-.kgFleetNoticeFinal strong{
-  margin-top:3px!important;
+.ctaCard em{
+  font-size:13px!important;
+  font-weight:650!important;
+  font-style:normal!important;
+  white-space:nowrap!important;
 }
-.finalCta{
-  padding-top:24px!important;
+.ctaCard:active{
+  transform:scale(.985)!important;
+}
+@keyframes kgCtaPulse{
+  0%{transform:scale(.985);opacity:.18}
+  50%{transform:scale(1.035);opacity:.06}
+  100%{transform:scale(.985);opacity:.18}
+}
+@media(max-width:370px){
+  .ctaCard{
+    height:72px!important;
+    padding:0 14px!important;
+    grid-template-columns:38px minmax(0,1fr) 1px auto!important;
+    column-gap:10px!important;
+  }
+  .ctaIcon,
+  .ctaKakao .talk,
+  .ctaBlog .dot{
+    width:38px!important;
+    height:38px!important;
+    font-size:22px!important;
+  }
+  .ctaCard strong{
+    font-size:21px!important;
+  }
 }
 </style>
 
@@ -1647,7 +1676,7 @@ section.simpleSteps .sub{
   <div class="heroBtns">
     <a class="primary" href="tel:01050687232">📷 24시간 상담 신청</a>
     <a class="tel" href="tel:01050687232">☎ 010-5068-7232 전화하기</a>
-    <a class="blog" href="https://m.blog.naver.com/carglass_/222179968451" target="_blank">🟢 시공사례 블로그 보기</a>
+    <a class="" href="https://m..naver.com/carglass_/222179968451" target="_blank">🟢 시공사례 블로그 보기</a>
   </div>
   
   
@@ -1687,20 +1716,20 @@ section.simpleSteps .sub{
     </a>
 
     <a class="ctaCard ctaKakao" href="tel:01050687232">
-      <span class="ctaIcon talk">TALK</span>
+      <span class="ctaIcon talk">💬</span>
       <strong>카카오톡 상담</strong>
       <span class="divider dark"></span>
       <em>바로가기</em>
     </a>
 
-    <a class="ctaCard ctaBlog" href="https://m.blog.naver.com/carglass_" target="_blank" rel="noopener">
-      <span class="ctaIcon dot"></span>
-      <strong>시공사례</strong>
+    <a class="ctaCard ctaBlog" href="https://m..naver.com/carglass_" target="_blank" rel="noopener">
+      <span class="ctaIcon dot">N</span>
+      <strong>네이버블로그</strong>
       <span class="divider"></span>
-      <em>네이버블로그</em>
+      <em>시공사례</em>
     </a>
 
-    <a class="ctaCard ctaWarranty" href="https://m.blog.naver.com/carglass_/222179968451" target="_blank" rel="noopener">
+    <a class="ctaCard ctaWarranty" href="https://m..naver.com/carglass_/222179968451" target="_blank" rel="noopener">
       <span class="ctaIcon shield">🛡️</span>
       <strong>평생보증서</strong>
       <span class="divider"></span>
@@ -1753,7 +1782,7 @@ section.simpleSteps .sub{
   <div class="noticeBox">
     <div class="noticeIcon">⚠</div>
     <div>
-      <a class="noticeTextLink" href="https://m.blog.naver.com/carglass_/222106565790" target="_blank" rel="noopener">
+      <a class="noticeTextLink" href="https://m..naver.com/carglass_/222106565790" target="_blank" rel="noopener">
         <b>복원 전 꼭 확인하세요</b>
         <span>조치 방법에 따라 복원율이 달라집니다 · 자세히 보기 ›</span>
       </a>
@@ -1763,14 +1792,14 @@ section.simpleSteps .sub{
 
 <section class="cases reveal">
   <h2>시공사례</h2>
-  <a class="caseCard" href="https://m.blog.naver.com/carglass_" target="_blank"><div class="caseImg"><span>돌빵 복원</span></div><div class="caseBody"><h3>고속도로 주행 중 발생한 돌빵 복원</h3><p>작은 손상도 방치하면 크랙이 길어질 수 있습니다.</p><div class="more">블로그에서 보기 →</div></div></a>
-  <a class="caseCard" href="https://m.blog.naver.com/carglass_" target="_blank"><div class="caseImg crack2"><span>롱크랙 전문</span></div><div class="caseBody"><h3>앞유리 롱크랙 출장 복원</h3><p>긴 균열은 사진 상담 후 가능 여부를 안내합니다.</p><div class="more">복원실적 보기 →</div></div></a>
+  <a class="caseCard" href="https://m..naver.com/carglass_" target="_blank"><div class="caseImg"><span>돌빵 복원</span></div><div class="caseBody"><h3>고속도로 주행 중 발생한 돌빵 복원</h3><p>작은 손상도 방치하면 크랙이 길어질 수 있습니다.</p><div class="more">블로그에서 보기 →</div></div></a>
+  <a class="caseCard" href="https://m..naver.com/carglass_" target="_blank"><div class="caseImg crack2"><span>롱크랙 전문</span></div><div class="caseBody"><h3>앞유리 롱크랙 출장 복원</h3><p>긴 균열은 사진 상담 후 가능 여부를 안내합니다.</p><div class="more">복원실적 보기 →</div></div></a>
 </section>
 
 <section class="promise reveal">
   <h2>복원 후에도<br>안심할 수 있도록</h2>
   <p class="promiseText">시공 품질에 대한 책임감을 담아 <strong class="kg-warranty-bold">평생보증서</strong>를 발행해드립니다.</p>
-  <a class="warranty" href="https://m.blog.naver.com/carglass_/222179968451" target="_blank" rel="noopener">📄 평생보증서 자세히 보기</a>
+  <a class="warranty" href="https://m..naver.com/carglass_/222179968451" target="_blank" rel="noopener">📄 평생보증서 자세히 보기</a>
 </section>
 
 
@@ -1786,35 +1815,29 @@ section.simpleSteps .sub{
     </div>
   </div>
 
-  <div class="carTypes kgCarTypesFinal">
-    <div><span>💎</span><b>슈퍼카</b></div>
-    <div><span>🚘</span><b>수입차</b></div>
-    <div><span>🛡️</span><b>국산차</b></div>
-    <div><span>🚙</span><b>SUV</b></div>
-    <div><span>🚐</span><b>RV</b></div>
-    <div><span>⚙️</span><b>경차·모닝</b></div>
+  <div class="carTypes">
+    <div>슈퍼카</div>
+    <div>수입차</div>
+    <div>국산차</div>
+    <div>SUV</div>
+    <div>RV</div>
+    <div>경차·모닝</div>
   </div>
 
-  <p class="fleetNotice kgFleetNoticeFinal">
-    <span>Ferrari · Lamborghini · Porsche · Mercedes-Benz</span>
-    <span>BMW · Bentley · Rolls-Royce · Maserati</span>
-    <span>Aston Martin · McLaren · Audi · Lexus</span>
-    <span>Genesis · Tesla · Volvo · Hyundai · Kia</span>
-    <strong>등 전 차종 상담 가능합니다.</strong>
-  </p>
+  <p class="fleetNotice">Ferrari · Lamborghini · Porsche · Mercedes-Benz · BMW · Genesis · Hyundai · Kia 등 전 차종 상담 가능합니다.</p>
 </section>
 
 <section class="finalCta reveal">
   <h2>사진 한 장만<br>보내주세요.</h2>
   <p>복원 가능 여부와 예상 비용을 빠르게 안내해드립니다.</p>
   <a class="tel" href="tel:01050687232">☎ 010-5068-7232</a>
-  <a class="blog" href="https://m.blog.naver.com/carglass_" target="_blank">🟢 블로그 시공사례 보기</a>
+  <a class="" href="https://m..naver.com/carglass_" target="_blank">🟢 블로그 시공사례 보기</a>
 </section>
 
 <nav class="bottom">
   <a class="bTel" href="tel:01050687232">☎ 전화</a>
-  <a class="bKakao" href="tel:01050687232">TALK 카카오톡 상담</a>
-  <a class="bBlog" href="https://m.blog.naver.com/carglass_" target="_blank">blog 네이버블로그</a>
+  <a class="bKakao" href="tel:01050687232">💬 카카오톡 상담</a>
+  <a class="bBlog" href="https://m..naver.com/carglass_" target="_blank"> 네이버블로그</a>
 </nav>
 </main>
 
