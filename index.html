@@ -1560,57 +1560,23 @@ section.simpleSteps .sub{
 </style>
 
 
-<style id="kg-vehicle-card-polish">
-/* 차량 종류 카드: 기존 디자인 유지 + 프리미엄 디테일 */
-.carTypes{
-  gap:8px!important;
-  padding:0 2px!important;
-}
-.carTypes div,
-.vehicleTypes div,
-.typeGrid div,
-.carType,
-.vehicleCard{
-  min-height:58px!important;
-  padding:10px 8px!important;
-  border-radius:18px!important;
-  box-shadow:0 5px 12px rgba(6,26,51,.055)!important;
-}
-.carTypes div span,
-.vehicleTypes div span,
-.typeGrid div span,
-.carType span,
-.vehicleCard span{
-  font-size:25px!important;
-  line-height:1!important;
-  margin-bottom:4px!important;
-}
-.carTypes div b,
-.vehicleTypes div b,
-.typeGrid div b,
-.carType b,
-.vehicleCard b{
-  font-weight:500!important;
-  letter-spacing:-.25px!important;
-}
-.carTypes div small,
-.vehicleTypes div small,
-.typeGrid div small,
-.carType small,
-.vehicleCard small{
-  font-weight:400!important;
-}
-
-/* 자동차 브랜드 영문 문구 */
-.fleetSub,
-.brandText,
-.brandLine,
-.carBrandText{
-  color:#24344D!important;
-  font-weight:500!important;
-  line-height:1.7!important;
-  letter-spacing:-.15px!important;
+<style id="kg-brand-text-final">
+.kgBrandTextFinal{
+  margin:14px 16px 18px!important;
+  padding:16px 14px!important;
+  border-radius:20px!important;
+  background:#EAF5FF!important;
   text-align:center!important;
+  color:#102946!important;
+  box-shadow:0 8px 18px rgba(6,26,51,.045)!important;
+}
+.kgBrandTextFinal span{
+  display:block!important;
+  font-size:18px!important;
+  line-height:1.38!important;
+  font-weight:700!important;
+  letter-spacing:-.35px!important;
+  white-space:normal!important;
 }
 </style>
 
@@ -1783,7 +1749,14 @@ section.simpleSteps .sub{
     <div>경차·모닝</div>
   </div>
 
-  <p class="fleetNotice">Ferrari · Lamborghini · Porsche · Mercedes-Benz · BMW · Bentley · Rolls-Royce · Maserati · Aston Martin · McLaren<br>Audi · Lexus · Genesis · Tesla · Volvo · Hyundai · Kia 등 전 차종 상담 가능합니다.</p>
+  <p class="fleetNotice">
+<div class="kgBrandTextFinal">
+  <span>Ferrari · Lamborghini · Porsche · Mercedes-Benz</span>
+  <span>BMW · Bentley · Rolls-Royce · Maserati</span>
+  <span>Aston Martin · McLaren · Audi · Lexus · Genesis</span>
+  <span>Tesla · Volvo · Hyundai · Kia 등 전 차종 상담 가능합니다.</span>
+</div>
+</p>
 </section>
 
 <section class="finalCta reveal">
