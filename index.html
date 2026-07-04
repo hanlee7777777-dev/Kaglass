@@ -1656,6 +1656,52 @@ section.simpleSteps .sub{
 }
 </style>
 
+
+<style id="kg-noticebox-animation-visible">
+.noticeBox{
+  position:relative!important;
+  overflow:hidden!important;
+  transform-origin:center!important;
+  animation:kgNoticeBounce 1.35s ease-in-out infinite!important;
+  box-shadow:0 12px 30px rgba(196,128,0,.22)!important;
+}
+.noticeBox::before{
+  content:""!important;
+  position:absolute!important;
+  inset:-7px!important;
+  border-radius:inherit!important;
+  border:3px solid rgba(255,179,0,.70)!important;
+  animation:kgNoticePulseRing 1.35s ease-in-out infinite!important;
+  pointer-events:none!important;
+}
+.noticeBox::after{
+  content:""!important;
+  position:absolute!important;
+  top:-60%!important;
+  left:-90%!important;
+  width:75%!important;
+  height:230%!important;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.68),transparent)!important;
+  transform:rotate(18deg)!important;
+  animation:kgNoticeShine 2s ease-in-out infinite!important;
+  pointer-events:none!important;
+}
+@keyframes kgNoticeBounce{
+  0%,100%{transform:translateY(0) scale(1)}
+  50%{transform:translateY(-7px) scale(1.015)}
+}
+@keyframes kgNoticePulseRing{
+  0%,100%{transform:scale(.985);opacity:.70}
+  50%{transform:scale(1.075);opacity:.10}
+}
+@keyframes kgNoticeShine{
+  0%{left:-90%;opacity:0}
+  15%{opacity:.95}
+  45%{left:125%;opacity:0}
+  100%{left:125%;opacity:0}
+}
+</style>
+
 </head>
 <body>
 <main class="mobile">
