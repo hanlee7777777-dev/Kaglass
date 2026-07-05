@@ -1475,18 +1475,75 @@ a:active,button:active{
 .finalCta a + a{margin-top:20px !important;}
 
 
-@keyframes kgShineSweep{
-  0%{transform:translateX(-180%) skewX(-20deg);}
-  60%,100%{transform:translateX(320%) skewX(-20deg);}
+/* KAKAO CTA FINAL STYLE START */
+@keyframes kakaoCtaPulse{
+  0%,100%{transform:translateY(0) scale(1);box-shadow:0 12px 26px rgba(255,213,0,.26)}
+  50%{transform:translateY(-2px) scale(1.012);box-shadow:0 16px 34px rgba(255,213,0,.42)}
 }
-.shine-card{position:relative;overflow:hidden;}
-.shine-card::after{
+@keyframes kakaoCtaShine{
+  0%{left:-70%}
+  55%{left:125%}
+  100%{left:125%}
+}
+.finalCta .heroBtns{
+  gap:20px !important;
+}
+.finalCta .heroBtns .kakaoMainCta{
+  position:relative !important;
+  overflow:hidden !important;
+  background:linear-gradient(135deg,#ffe45c,#ffd400) !important;
+  color:#171100 !important;
+  box-shadow:0 12px 26px rgba(255,213,0,.28) !important;
+  animation:kakaoCtaPulse 3.2s ease-in-out infinite !important;
+}
+.finalCta .heroBtns .kakaoMainCta::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-70%;
+  width:42%;
+  height:100%;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,.55),transparent);
+  transform:skewX(-22deg);
+  animation:kakaoCtaShine 4s ease-in-out infinite;
+  pointer-events:none;
+}
+.finalCta .heroBtns .kakaoMainCta:active{
+  transform:scale(.985) !important;
+}
+.finalCta .heroBtns .kakaoMainCta .talkBadge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:42px;
+  height:24px;
+  margin-right:8px;
+  border-radius:999px;
+  background:#191600;
+  color:#ffd400;
+  font-size:12px;
+  font-weight:1000;
+  letter-spacing:-.2px;
+}
+/* KAKAO CTA FINAL STYLE END */
+
+
+/* Shine effect for process card */
+@keyframes processShine{
+  0%{left:-45%}
+  60%,100%{left:145%}
+}
+.process-shine{position:relative;overflow:hidden}
+.process-shine::after{
  content:"";
  position:absolute;
- top:0;left:0;
- width:35%;height:100%;
- background:linear-gradient(110deg,transparent,rgba(255,255,255,.35),transparent);
- animation:kgShineSweep 5s ease-in-out infinite;
+ top:0;
+ left:-45%;
+ width:32%;
+ height:100%;
+ background:linear-gradient(115deg,transparent,rgba(255,255,255,.38),transparent);
+ transform:skewX(-20deg);
+ animation:processShine 5s ease-in-out infinite;
  pointer-events:none;
 }
 
@@ -2007,7 +2064,7 @@ section.simpleSteps .sub{
   <h2>간편 접수 3단계</h2>
   <p class="sub"><span class="kg-sub-110">전화 한 통, 사진 한 장이면 끝납니다.</span></p>
 
-  <div class="stepCard shine-card">
+  <div class="stepCard">
     <div class="stepBadge">STEP 1</div>
     <div class="stepRow">
       <div class="stepIcon">📷</div>
@@ -2127,7 +2184,7 @@ section.simpleSteps .sub{
   <p>복원 가능 여부와 예상 비용을 빠르게 안내해드립니다.</p>
   <div class="heroBtns">
     <a class="primary" href="https://open.kakao.com/o/sbIjoyCi">24시간 상담 신청</a>
-    <a class="tel" href="tel:01050687232">전화하기</a>
+    <a class="tel kakaoMainCta" href="https://open.kakao.com/o/sbIjoyCi"><span class="talkBadge">TALK</span> 카카오톡 상담하기</a>
     <a class="blog" href="https://m.blog.naver.com/carglass_" target="_blank">블로그 시공사례 보기</a>
   </div>
 </section>
