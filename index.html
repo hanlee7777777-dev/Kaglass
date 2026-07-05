@@ -399,7 +399,7 @@ url('data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAA
   margin:0 0 24px!important;
   color:#5b6876!important;
   font-size:16px!important;
-  font-weight:700!important;
+  font-weight:850!important;
   letter-spacing:-.5px;
 }
 .stepCard{
@@ -465,7 +465,7 @@ url('data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAA
   font-size:16px!important;
   line-height:1.65!important;
   color:#596878!important;
-  font-weight:700!important;
+  font-weight:850!important;
   margin:12px 0 0!important;
   letter-spacing:-.4px!important;
 }
@@ -1657,61 +1657,13 @@ section.simpleSteps .sub{
 </style>
 
 
-
-
-
-
-
-
-<style id="kg-warranty-final-readable">
-.heroWarranty{
-  position:relative!important;
-  z-index:2!important;
-  margin-top:28px!important;
-  margin-bottom:28px!important;
-  padding:0!important;
-  background:transparent!important;
-  box-shadow:none!important;
-  border:none!important;
-  border-radius:0!important;
-  text-align:center!important;
-  color:#fff!important;
+<style id="kg-move-cta-before-cases">
+.quickMovedCta{
+  padding-top:6px!important;
+  padding-bottom:24px!important;
 }
-.heroWarranty b{
-  display:block!important;
-  color:#8FD3FF!important;
-  font-size:22px!important;
-  line-height:1.35!important;
-  font-weight:620!important;
-  letter-spacing:-.8px!important;
-  margin:0 0 18px!important;
-  text-shadow:0 0 8px rgba(143,211,255,.22)!important;
-  animation:kgWarrantySoftGlow 2.8s ease-in-out infinite!important;
-}
-.heroWarranty p{
+.quickMovedCta .ctaCards{
   margin:0!important;
-  color:rgba(255,255,255,.94)!important;
-  font-size:17px!important;
-  line-height:1.7!important;
-  font-weight:620!important;
-  letter-spacing:-.35px!important;
-}
-.heroWarranty .kg-warranty-bold{
-  color:#8FD3FF!important;
-  font-weight:620!important;
-  text-shadow:0 0 8px rgba(143,211,255,.22)!important;
-  animation:kgWarrantySoftGlow 2.8s ease-in-out infinite!important;
-}
-.hero .stats{
-  margin-top:30px!important;
-}
-@keyframes kgWarrantySoftGlow{
-  0%,100%{opacity:.92;text-shadow:0 0 4px rgba(143,211,255,.12)}
-  50%{opacity:1;text-shadow:0 0 12px rgba(143,211,255,.36)}
-}
-.finalCta .primary{
-  background:#fff!important;
-  color:#082243!important;
 }
 </style>
 
@@ -1733,9 +1685,10 @@ section.simpleSteps .sub{
   <h1 class="heroTitle"><span class="line one">교체보다</span><span class="line two">복원이 먼저입니다</span></h1>
   <div class="slogan">평생보증하는<br>카글라스자동차유리복원</div>
   <p class="desc">서울 전지역 · 경기 일부지역 무료출장<br>사진 한 장만 보내주시면 복원 가능 여부와 예상 비용을 안내해드립니다.</p>
-  <div class="heroWarranty">
-    <b>복원 후에도<br>안심할 수 있도록</b>
-    <p>시공 품질에 대한 책임감을 담아<br><strong class="kg-warranty-bold">평생보증서</strong>를 발행해드립니다.</p>
+  <div class="heroBtns">
+    <a class="primary" href="tel:01050687232">📷 24시간 상담 신청</a>
+    <a class="tel" href="tel:01050687232">☎ 010-5068-7232 전화하기</a>
+    <a class="blog" href="https://m.blog.naver.com/carglass_/222179968451" target="_blank">🟢 시공사례 블로그 보기</a>
   </div>
   
   
@@ -1765,36 +1718,6 @@ section.simpleSteps .sub{
 <section class="quick reveal">
   <h2>사진 한 장이면<br>상담이 시작됩니다.</h2>
   <p>손상 부위를 선명하게 촬영해 보내주세요. 위치와 크기에 따라 복원 가능 여부를 안내해드립니다.</p>
-
-  <div class="ctaCards">
-    <a class="ctaCard ctaTel" href="tel:01050687232">
-      <span class="ctaIcon phone">☎</span>
-      <strong>전화 상담</strong>
-      <span class="divider"></span>
-      <em>바로 연결</em>
-    </a>
-
-    <a class="ctaCard ctaKakao" href="https://open.kakao.com/o/sbIjoyCi">
-      <span class="ctaIcon talk">TALK</span>
-      <strong>카카오톡 상담</strong>
-      <span class="divider dark"></span>
-      <em>바로가기</em>
-    </a>
-
-    <a class="ctaCard ctaBlog" href="https://m.blog.naver.com/carglass_" target="_blank" rel="noopener">
-      <span class="ctaIcon dot"></span>
-      <strong>시공사례</strong>
-      <span class="divider"></span>
-      <em>네이버블로그</em>
-    </a>
-
-    <a class="ctaCard ctaWarranty" href="https://m.blog.naver.com/carglass_/222179968451" target="_blank" rel="noopener">
-      <span class="ctaIcon shield">🛡️</span>
-      <strong>평생보증서</strong>
-      <span class="divider"></span>
-      <em>바로가기</em>
-    </a>
-  </div>
 </section>
 
 
@@ -1849,12 +1772,50 @@ section.simpleSteps .sub{
   </div>
 </section>
 
+
+<section class="quick quickMovedCta reveal">
+  <div class="ctaCards">
+    <a class="ctaCard ctaTel" href="tel:01050687232">
+      <span class="ctaIcon phone">☎</span>
+      <strong>전화 상담</strong>
+      <span class="divider"></span>
+      <em>바로 연결</em>
+    </a>
+
+    <a class="ctaCard ctaKakao" href="https://open.kakao.com/o/sbIjoyCi">
+      <span class="ctaIcon talk">TALK</span>
+      <strong>카카오톡 상담</strong>
+      <span class="divider dark"></span>
+      <em>바로가기</em>
+    </a>
+
+    <a class="ctaCard ctaBlog" href="https://m.blog.naver.com/carglass_" target="_blank" rel="noopener">
+      <span class="ctaIcon dot"></span>
+      <strong>시공사례</strong>
+      <span class="divider"></span>
+      <em>네이버블로그</em>
+    </a>
+
+    <a class="ctaCard ctaWarranty" href="https://m.blog.naver.com/carglass_/222179968451" target="_blank" rel="noopener">
+      <span class="ctaIcon shield">🛡️</span>
+      <strong>평생보증서</strong>
+      <span class="divider"></span>
+      <em>바로가기</em>
+    </a>
+  </div>
+</section>
+
 <section class="cases reveal">
   <h2>시공사례</h2>
   <a class="caseCard" href="https://m.blog.naver.com/carglass_" target="_blank"><div class="caseImg"><span>돌빵 복원</span></div><div class="caseBody"><h3>고속도로 주행 중 발생한 돌빵 복원</h3><p>작은 손상도 방치하면 크랙이 길어질 수 있습니다.</p><div class="more">블로그에서 보기 →</div></div></a>
   <a class="caseCard" href="https://m.blog.naver.com/carglass_" target="_blank"><div class="caseImg crack2"><span>롱크랙 전문</span></div><div class="caseBody"><h3>앞유리 롱크랙 출장 복원</h3><p>긴 균열은 사진 상담 후 가능 여부를 안내합니다.</p><div class="more">복원실적 보기 →</div></div></a>
 </section>
 
+<section class="promise reveal">
+  <h2>복원 후에도<br>안심할 수 있도록</h2>
+  <p class="promiseText kgPromiseCenter">시공 품질에 대한 책임감을 담아<br><strong class="kg-warranty-bold">평생보증서</strong>를 발행해드립니다.</p>
+  <a class="warranty" href="https://m.blog.naver.com/carglass_/222179968451" target="_blank" rel="noopener">📄 평생보증서 자세히 보기</a>
+</section>
 
 
 <section class="fleetSection reveal">
@@ -1890,8 +1851,7 @@ section.simpleSteps .sub{
 <section class="finalCta reveal">
   <h2>사진 한 장만<br>보내주세요.</h2>
   <p>복원 가능 여부와 예상 비용을 빠르게 안내해드립니다.</p>
-  <a class="primary" href="tel:01050687232">📷 24시간 상담 신청</a>
-  <a class="tel" href="tel:01050687232">☎ 010-5068-7232 전화하기</a>
+  <a class="tel" href="tel:01050687232">☎ 010-5068-7232</a>
   <a class="blog" href="https://m.blog.naver.com/carglass_" target="_blank">🟢 블로그 시공사례 보기</a>
 </section>
 
