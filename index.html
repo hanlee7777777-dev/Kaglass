@@ -1657,51 +1657,55 @@ section.simpleSteps .sub{
 </style>
 
 
-<style id="kg-layout-move-final">
+
+
+
+<style id="kg-warranty-text-animation">
 .heroWarranty{
-  position:relative;
-  z-index:2;
-  margin-top:18px;
-  padding:18px 16px;
-  border-radius:18px;
-  background:rgba(255,255,255,.94);
-  color:#082243;
-  text-align:center;
-  box-shadow:0 10px 26px rgba(0,0,0,.20);
-  backdrop-filter:blur(10px);
+  position:relative!important;
+  z-index:2!important;
+  margin-top:26px!important;
+  padding:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  border:none!important;
+  text-align:center!important;
+  color:#fff!important;
 }
 .heroWarranty b{
-  display:block;
-  font-size:26px;
-  line-height:1.15;
-  font-weight:1000;
-  letter-spacing:-1.5px;
-  margin-bottom:10px;
+  display:block!important;
+  color:#FFD84A!important;
+  font-size:23px!important;
+  line-height:1.32!important;
+  font-weight:850!important;
+  letter-spacing:-1px!important;
+  margin:0 0 12px!important;
+  animation:kgWarrantyTitleGlow 2.4s ease-in-out infinite!important;
 }
 .heroWarranty p{
-  margin:0 0 14px;
-  color:#31465c;
-  font-size:16px;
-  line-height:1.55;
-  font-weight:750;
+  margin:0!important;
+  color:rgba(255,255,255,.92)!important;
+  font-size:17px!important;
+  line-height:1.65!important;
+  font-weight:650!important;
+  letter-spacing:-.4px!important;
 }
-.heroWarranty a{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  height:44px;
-  padding:0 16px;
-  border-radius:999px;
-  background:#fff;
-  color:#e50012;
-  text-decoration:none;
-  font-size:15px;
-  font-weight:1000;
-  box-shadow:0 6px 16px rgba(6,26,51,.12);
+.heroWarranty .kg-warranty-bold{
+  color:#FFD84A!important;
+  font-weight:850!important;
+  animation:kgWarrantyWordGlow 2.4s ease-in-out infinite!important;
 }
 .finalCta .primary{
-  background:#fff;
-  color:#082243;
+  background:#fff!important;
+  color:#082243!important;
+}
+@keyframes kgWarrantyTitleGlow{
+  0%,100%{opacity:.92;text-shadow:0 0 0 rgba(255,216,74,0)}
+  50%{opacity:1;text-shadow:0 0 12px rgba(255,216,74,.45)}
+}
+@keyframes kgWarrantyWordGlow{
+  0%,100%{text-shadow:0 0 0 rgba(255,216,74,0)}
+  50%{text-shadow:0 0 10px rgba(255,216,74,.45)}
 }
 </style>
 
@@ -1726,7 +1730,6 @@ section.simpleSteps .sub{
   <div class="heroWarranty">
     <b>복원 후에도<br>안심할 수 있도록</b>
     <p>시공 품질에 대한 책임감을 담아<br><strong class="kg-warranty-bold">평생보증서</strong>를 발행해드립니다.</p>
-    <a href="https://m.blog.naver.com/carglass_/222179968451" target="_blank" rel="noopener">📄 평생보증서 자세히 보기</a>
   </div>
   
   
