@@ -1600,6 +1600,67 @@ a:active,button:active{
 }
 /* WARRANTY MARK ANIMATION END */
 
+
+/* TWO INFO CARD ANIMATION START */
+@keyframes kgCardBlueShine{
+  0%{transform:translateX(-160%) skewX(-22deg);opacity:0}
+  12%{opacity:1}
+  55%{opacity:1}
+  100%{transform:translateX(280%) skewX(-22deg);opacity:0}
+}
+@keyframes kgCardGoldShine{
+  0%{transform:translateX(-170%) skewX(-22deg);opacity:0}
+  15%{opacity:1}
+  58%{opacity:1}
+  100%{transform:translateX(280%) skewX(-22deg);opacity:0}
+}
+@keyframes kgWarnIconPulse{
+  0%,100%{transform:scale(1);filter:drop-shadow(0 0 0 rgba(255,190,0,0))}
+  50%{transform:scale(1.12);filter:drop-shadow(0 0 12px rgba(255,190,0,.65))}
+}
+.kg-step-shine,
+.kg-warn-shine{
+  position:relative !important;
+  overflow:hidden !important;
+}
+.kg-step-shine::after{
+  content:"";
+  position:absolute;
+  top:-20%;
+  left:0;
+  width:34%;
+  height:140%;
+  background:linear-gradient(115deg,transparent,rgba(255,255,255,.38),rgba(110,190,255,.22),transparent);
+  transform:translateX(-160%) skewX(-22deg);
+  animation:kgCardBlueShine 3.8s ease-in-out infinite;
+  pointer-events:none;
+  z-index:3;
+}
+.kg-warn-shine::after{
+  content:"";
+  position:absolute;
+  top:-20%;
+  left:0;
+  width:34%;
+  height:140%;
+  background:linear-gradient(115deg,transparent,rgba(255,230,120,.32),rgba(255,255,255,.24),transparent);
+  transform:translateX(-170%) skewX(-22deg);
+  animation:kgCardGoldShine 4.4s ease-in-out infinite;
+  pointer-events:none;
+  z-index:3;
+}
+.kg-step-shine > *,
+.kg-warn-shine > *{
+  position:relative;
+  z-index:2;
+}
+.kg-warn-icon-pulse{
+  display:inline-block !important;
+  animation:kgWarnIconPulse 2.4s ease-in-out infinite !important;
+  transform-origin:center !important;
+}
+/* TWO INFO CARD ANIMATION END */
+
 </style>
 
 <style id="kg-final-force">
@@ -2180,7 +2241,7 @@ section.simpleSteps .sub{
   </div>
 
   <div class="noticeBox">
-    <div class="noticeIcon">⚠</div>
+    <div class="noticeIcon kg-warn-shine">⚠</div>
     <div>
       <a class="noticeTextLink" href="https://m.blog.naver.com/carglass_/222106565790" target="_blank" rel="noopener">
         <b>복원 전 꼭 확인하세요</b>
