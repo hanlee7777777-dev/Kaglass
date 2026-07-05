@@ -10,10 +10,10 @@
 :root{--navy:#061a33;--blue:#0869e8;--green:#05a63b;--red:#e50012;--gold:#ffd84a;--light:#f5f8fc}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#e9eff6;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR","Segoe UI",Arial,sans-serif;color:#0b1e33}
+body{margin:0;background:#DCE3EA;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR","Segoe UI",Arial,sans-serif;color:#0b1e33}
 img{max-width:100%;display:block}
 a{-webkit-tap-highlight-color:transparent}
-.mobile{max-width:430px;margin:0 auto;background:#fff;min-height:100vh;overflow:hidden;box-shadow:0 0 30px rgba(0,0,0,.16);padding-bottom:82px}
+.mobile{max-width:430px;margin:0 auto;background:#DCE3EA;min-height:100vh;overflow:hidden;box-shadow:0 0 30px rgba(0,0,0,.16);padding-bottom:82px}
 .top{position:sticky;top:0;z-index:50;height:62px;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);display:flex;align-items:center;justify-content:space-between;padding:9px 14px;border-bottom:1px solid #e4ebf3}
 .logo{display:flex;align-items:center;gap:8px}
 .logo .mark{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#0c72f0,#052a5a);display:grid;place-items:center;color:white;font-size:22px}
@@ -1657,22 +1657,13 @@ section.simpleSteps .sub{
 </style>
 
 
-<style id="kg-final-html-layout">
-/* 버튼 4개: 기존 디자인 유지, 위치만 시공사례 위 */
-.quickMovedCta{
-  padding-top:6px!important;
-  padding-bottom:24px!important;
-}
-.quickMovedCta .ctaCards{
-  margin:0!important;
-}
-
-/* 보증 문구: 배경박스/버튼 없이 텍스트만 */
+<style id="kg-final-replay-apply">
+/* 오늘 확정: 상단 보증 안내는 배경 박스/버튼 없이 텍스트만 */
 .heroWarranty{
   position:relative!important;
   z-index:2!important;
   margin-top:28px!important;
-  margin-bottom:28px!important;
+  margin-bottom:30px!important;
   padding:0!important;
   background:transparent!important;
   box-shadow:none!important;
@@ -1686,7 +1677,7 @@ section.simpleSteps .sub{
   color:#8FD3FF!important;
   font-size:22px!important;
   line-height:1.35!important;
-  font-weight:620!important;
+  font-weight:600!important;
   letter-spacing:-.8px!important;
   margin:0 0 18px!important;
   text-shadow:0 0 8px rgba(143,211,255,.22)!important;
@@ -1702,16 +1693,75 @@ section.simpleSteps .sub{
 }
 .heroWarranty .kg-warranty-bold{
   color:#8FD3FF!important;
-  font-weight:620!important;
+  font-weight:600!important;
   text-shadow:0 0 8px rgba(143,211,255,.22)!important;
   animation:kgWarrantySoftGlow 2.8s ease-in-out infinite!important;
 }
-.hero .stats{
+.hero .stats,
+.hero .premiumStats{
   margin-top:30px!important;
 }
 @keyframes kgWarrantySoftGlow{
   0%,100%{opacity:.92;text-shadow:0 0 4px rgba(143,211,255,.12)}
-  50%{opacity:1;text-shadow:0 0 12px rgba(143,211,255,.36)}
+  50%{opacity:1;text-shadow:0 0 12px rgba(143,211,255,.34)}
+}
+
+/* 버튼 4개는 디자인 그대로, 위치만 시공사례 위 */
+.quickMovedCta{
+  padding-top:6px!important;
+  padding-bottom:24px!important;
+}
+.quickMovedCta .ctaCards{
+  margin:0!important;
+}
+
+/* 간편 접수 설명 문구 10% 확대 */
+.kg-sub-110{
+  font-size:110%!important;
+}
+
+/* 복원 전 꼭 확인하세요 박스: 보이게 움직이는 애니메이션 */
+.noticeBox{
+  position:relative!important;
+  overflow:hidden!important;
+  transform-origin:center!important;
+  animation:kgNoticeBounce 1.35s ease-in-out infinite!important;
+  box-shadow:0 12px 30px rgba(196,128,0,.22)!important;
+}
+.noticeBox::before{
+  content:""!important;
+  position:absolute!important;
+  inset:-7px!important;
+  border-radius:inherit!important;
+  border:3px solid rgba(255,179,0,.70)!important;
+  animation:kgNoticePulseRing 1.35s ease-in-out infinite!important;
+  pointer-events:none!important;
+}
+.noticeBox::after{
+  content:""!important;
+  position:absolute!important;
+  top:-60%!important;
+  left:-90%!important;
+  width:75%!important;
+  height:230%!important;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.68),transparent)!important;
+  transform:rotate(18deg)!important;
+  animation:kgNoticeShine 2s ease-in-out infinite!important;
+  pointer-events:none!important;
+}
+@keyframes kgNoticeBounce{
+  0%,100%{transform:translateY(0) scale(1)}
+  50%{transform:translateY(-7px) scale(1.015)}
+}
+@keyframes kgNoticePulseRing{
+  0%,100%{transform:scale(.985);opacity:.70}
+  50%{transform:scale(1.075);opacity:.10}
+}
+@keyframes kgNoticeShine{
+  0%{left:-90%;opacity:0}
+  15%{opacity:.95}
+  45%{left:125%;opacity:0}
+  100%{left:125%;opacity:0}
 }
 </style>
 
@@ -1733,10 +1783,9 @@ section.simpleSteps .sub{
   <h1 class="heroTitle"><span class="line one">교체보다</span><span class="line two">복원이 먼저입니다</span></h1>
   <div class="slogan">평생보증하는<br>카글라스자동차유리복원</div>
   <p class="desc">서울 전지역 · 경기 일부지역 무료출장<br>사진 한 장만 보내주시면 복원 가능 여부와 예상 비용을 안내해드립니다.</p>
-  <div class="heroBtns">
-    <a class="primary" href="tel:01050687232">📷 24시간 상담 신청</a>
-    <a class="tel" href="tel:01050687232">☎ 010-5068-7232 전화하기</a>
-    <a class="blog" href="https://m.blog.naver.com/carglass_/222179968451" target="_blank">🟢 시공사례 블로그 보기</a>
+  <div class="heroWarranty">
+    <b>복원 후에도<br>안심할 수 있도록</b>
+    <p>시공 품질에 대한 책임감을 담아<br><strong class="kg-warranty-bold">평생보증서</strong>를 발행해드립니다.</p>
   </div>
   
   
@@ -1774,7 +1823,7 @@ section.simpleSteps .sub{
 
 <section class="simpleSteps reveal">
   <h2>간편 접수 3단계</h2>
-  <p class="sub">전화 한 통, 사진 한 장이면 끝납니다.</p>
+  <p class="sub"><span class="kg-sub-110">전화 한 통, 사진 한 장이면 끝납니다.</span></p>
 
   <div class="stepCard">
     <div class="stepBadge">STEP 1</div>
@@ -1859,11 +1908,6 @@ section.simpleSteps .sub{
   <a class="caseCard" href="https://m.blog.naver.com/carglass_" target="_blank"><div class="caseImg crack2"><span>롱크랙 전문</span></div><div class="caseBody"><h3>앞유리 롱크랙 출장 복원</h3><p>긴 균열은 사진 상담 후 가능 여부를 안내합니다.</p><div class="more">복원실적 보기 →</div></div></a>
 </section>
 
-<section class="promise reveal">
-  <h2>복원 후에도<br>안심할 수 있도록</h2>
-  <p class="promiseText kgPromiseCenter">시공 품질에 대한 책임감을 담아<br><strong class="kg-warranty-bold">평생보증서</strong>를 발행해드립니다.</p>
-  <a class="warranty" href="https://m.blog.naver.com/carglass_/222179968451" target="_blank" rel="noopener">📄 평생보증서 자세히 보기</a>
-</section>
 
 
 <section class="fleetSection reveal">
