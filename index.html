@@ -1524,27 +1524,8 @@ a:active,button:active{
 /* KAKAO CTA SAFE FINAL END */
 
 
-/* HEADER CALL BUTTON CENTER FIX START */
-.top > a{
-  display:inline-flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  gap:6px !important;
-  text-align:center !important;
-  white-space:nowrap !important;
-  min-width:112px !important;
-  padding-left:16px !important;
-  padding-right:16px !important;
-}
-.top > a .phoneIcon{
-  display:inline-flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  width:18px !important;
-  height:18px !important;
-  flex:0 0 auto !important;
-}
-/* HEADER CALL BUTTON CENTER FIX END */
+.top>a{display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:6px!important}
+.top>a .phoneIcon{display:inline-block;width:16px;text-align:center}
 
 </style>
 
@@ -2037,7 +2018,7 @@ section.simpleSteps .sub{
   </div>
 </div>
 
-<a href="tel:01050687232">📞 전화하기</a>
+<a href="tel:01050687232"><span class="phoneIcon">☎</span><span>전화하기</span></a>
 </header>
 
 <section class="hero">
