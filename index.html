@@ -1524,8 +1524,46 @@ a:active,button:active{
 /* KAKAO CTA SAFE FINAL END */
 
 
-.top>a{display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:6px!important}
-.top>a .phoneIcon{display:inline-block;width:16px;text-align:center}
+/* FINAL HEADER + CTA GAP FIX */
+.top > a.topCall{
+  position:relative !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:118px !important;
+  min-width:118px !important;
+  height:44px !important;
+  padding:0 !important;
+  text-align:center !important;
+  white-space:nowrap !important;
+}
+.top > a.topCall::before{
+  content:"☎";
+  position:absolute;
+  left:16px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:17px;
+  line-height:1;
+}
+.top > a.topCall .topCallText{
+  display:block !important;
+  width:100% !important;
+  text-align:center !important;
+  padding-left:12px !important;
+}
+.finalCta .heroBtns{
+  gap:18px !important;
+  row-gap:18px !important;
+  margin-top:22px !important;
+}
+.finalCta .heroBtns a{
+  margin-top:0 !important;
+  margin-bottom:0 !important;
+}
+.finalCta .heroBtns a + a{
+  margin-top:0 !important;
+}
 
 </style>
 
@@ -2018,7 +2056,7 @@ section.simpleSteps .sub{
   </div>
 </div>
 
-<a href="tel:01050687232"><span class="phoneIcon">☎</span><span>전화하기</span></a>
+<a class="topCall" href="tel:01050687232"><span class="topCallText">전화하기</span></a>
 </header>
 
 <section class="hero">
