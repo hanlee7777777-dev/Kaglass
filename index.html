@@ -1601,67 +1601,43 @@ a:active,button:active{
 /* WARRANTY MARK ANIMATION END */
 
 
-
-
-/* TWO INFO CARD ANIMATION START */
-@keyframes kgBlueSweep{
-  0%{left:-45%;opacity:0}
-  12%{opacity:1}
-  55%{opacity:1}
-  100%{left:120%;opacity:0}
+/* SUBTLE STEP NOTICE ANIMATION START */
+@keyframes kgStepBadgeSoft{
+  0%,100%{
+    transform:scale(1);
+    box-shadow:none;
+    filter:none;
+  }
+  50%{
+    transform:scale(1.025);
+    box-shadow:0 0 10px rgba(8,105,232,.18);
+    filter:brightness(1.04);
+  }
 }
-@keyframes kgGoldSweep{
-  0%{left:-45%;opacity:0}
-  14%{opacity:1}
-  58%{opacity:1}
-  100%{left:120%;opacity:0}
+@keyframes kgNoticeIconSoft{
+  0%,100%{
+    transform:scale(1);
+    filter:none;
+  }
+  50%{
+    transform:scale(1.035);
+    filter:drop-shadow(0 0 7px rgba(255,190,0,.42));
+  }
 }
-@keyframes kgWarnPulse{
-  0%,100%{transform:scale(1);filter:drop-shadow(0 0 0 rgba(255,190,0,0))}
-  50%{transform:scale(1.14);filter:drop-shadow(0 0 12px rgba(255,190,0,.65))}
-}
-.simpleSteps.kg-step-shine,
-.noticeBox.kg-warn-shine{
-  position:relative !important;
-  overflow:hidden !important;
-}
-.simpleSteps.kg-step-shine::after{
-  content:"";
-  position:absolute;
-  top:-20%;
-  left:-45%;
-  width:38%;
-  height:140%;
-  background:linear-gradient(115deg,transparent,rgba(255,255,255,.42),rgba(105,190,255,.28),transparent);
-  transform:skewX(-22deg);
-  animation:kgBlueSweep 3.8s ease-in-out infinite;
-  pointer-events:none;
-  z-index:5;
-}
-.noticeBox.kg-warn-shine::after{
-  content:"";
-  position:absolute;
-  top:-25%;
-  left:-45%;
-  width:38%;
-  height:150%;
-  background:linear-gradient(115deg,transparent,rgba(255,220,90,.38),rgba(255,255,255,.25),transparent);
-  transform:skewX(-22deg);
-  animation:kgGoldSweep 4.2s ease-in-out infinite;
-  pointer-events:none;
-  z-index:5;
-}
-.simpleSteps.kg-step-shine > *,
-.noticeBox.kg-warn-shine > *{
-  position:relative;
-  z-index:2;
-}
-.noticeIcon.kg-warn-icon-pulse{
-  display:flex !important;
-  animation:kgWarnPulse 2.4s ease-in-out infinite !important;
+.simpleSteps .stepCard .stepBadge{
+  animation:kgStepBadgeSoft 4.8s ease-in-out infinite !important;
   transform-origin:center !important;
+  will-change:transform,filter;
 }
-/* TWO INFO CARD ANIMATION END */
+.simpleSteps .stepCard:nth-of-type(1) .stepBadge{animation-delay:0s !important;}
+.simpleSteps .stepCard:nth-of-type(2) .stepBadge{animation-delay:.8s !important;}
+.simpleSteps .stepCard:nth-of-type(3) .stepBadge{animation-delay:1.6s !important;}
+.noticeBox .noticeIcon{
+  animation:kgNoticeIconSoft 3.2s ease-in-out infinite !important;
+  transform-origin:center !important;
+  will-change:transform,filter;
+}
+/* SUBTLE STEP NOTICE ANIMATION END */
 
 </style>
 
@@ -2205,7 +2181,7 @@ section.simpleSteps .sub{
 
 
 
-<section class="simpleSteps reveal kg-step-shine">
+<section class="simpleSteps reveal">
   <h2>간편 접수 3단계</h2>
   <p class="sub"><span class="kg-sub-110">전화 한 통, 사진 한 장이면 끝납니다.</span></p>
 
@@ -2242,8 +2218,8 @@ section.simpleSteps .sub{
     </div>
   </div>
 
-  <div class="noticeBox kg-warn-shine">
-    <div class="noticeIcon kg-warn-icon-pulse">⚠</div>
+  <div class="noticeBox">
+    <div class="noticeIcon">⚠</div>
     <div>
       <a class="noticeTextLink" href="https://m.blog.naver.com/carglass_/222106565790" target="_blank" rel="noopener">
         <b>복원 전 꼭 확인하세요</b>
