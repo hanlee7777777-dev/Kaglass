@@ -1657,13 +1657,61 @@ section.simpleSteps .sub{
 </style>
 
 
-<style id="kg-move-cta-before-cases">
+<style id="kg-final-html-layout">
+/* 버튼 4개: 기존 디자인 유지, 위치만 시공사례 위 */
 .quickMovedCta{
   padding-top:6px!important;
   padding-bottom:24px!important;
 }
 .quickMovedCta .ctaCards{
   margin:0!important;
+}
+
+/* 보증 문구: 배경박스/버튼 없이 텍스트만 */
+.heroWarranty{
+  position:relative!important;
+  z-index:2!important;
+  margin-top:28px!important;
+  margin-bottom:28px!important;
+  padding:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  border:none!important;
+  border-radius:0!important;
+  text-align:center!important;
+  color:#fff!important;
+}
+.heroWarranty b{
+  display:block!important;
+  color:#8FD3FF!important;
+  font-size:22px!important;
+  line-height:1.35!important;
+  font-weight:620!important;
+  letter-spacing:-.8px!important;
+  margin:0 0 18px!important;
+  text-shadow:0 0 8px rgba(143,211,255,.22)!important;
+  animation:kgWarrantySoftGlow 2.8s ease-in-out infinite!important;
+}
+.heroWarranty p{
+  margin:0!important;
+  color:rgba(255,255,255,.94)!important;
+  font-size:17px!important;
+  line-height:1.7!important;
+  font-weight:620!important;
+  letter-spacing:-.35px!important;
+}
+.heroWarranty .kg-warranty-bold{
+  color:#8FD3FF!important;
+  font-weight:620!important;
+  text-shadow:0 0 8px rgba(143,211,255,.22)!important;
+  animation:kgWarrantySoftGlow 2.8s ease-in-out infinite!important;
+}
+.hero .stats{
+  margin-top:30px!important;
+}
+@keyframes kgWarrantySoftGlow{
+  0%,100%{opacity:.92;text-shadow:0 0 4px rgba(143,211,255,.12)}
+  50%{opacity:1;text-shadow:0 0 12px rgba(143,211,255,.36)}
 }
 </style>
 
