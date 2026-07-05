@@ -1528,24 +1528,35 @@ a:active,button:active{
 /* KAKAO CTA FINAL STYLE END */
 
 
-/* Shine effect for process card */
-@keyframes processShine{
-  0%{left:-45%}
-  60%,100%{left:145%}
+/* EXACT TWO SHINE EFFECTS START */
+@keyframes kgSoftShineSweep{
+  0%{transform:translateX(-160%) skewX(-22deg);opacity:0}
+  12%{opacity:1}
+  55%{opacity:1}
+  100%{transform:translateX(260%) skewX(-22deg);opacity:0}
 }
-.process-shine{position:relative;overflow:hidden}
-.process-shine::after{
- content:"";
- position:absolute;
- top:0;
- left:-45%;
- width:32%;
- height:100%;
- background:linear-gradient(115deg,transparent,rgba(255,255,255,.38),transparent);
- transform:skewX(-20deg);
- animation:processShine 5s ease-in-out infinite;
- pointer-events:none;
+.kg-shine-target{
+  position:relative !important;
+  overflow:hidden !important;
 }
+.kg-shine-target::after{
+  content:"";
+  position:absolute;
+  top:-20%;
+  left:0;
+  width:38%;
+  height:140%;
+  background:linear-gradient(115deg,transparent,rgba(255,255,255,.42),rgba(125,205,255,.25),transparent);
+  transform:translateX(-160%) skewX(-22deg);
+  animation:kgSoftShineSweep 4.8s ease-in-out infinite;
+  pointer-events:none;
+  z-index:3;
+}
+.kg-shine-target > *{
+  position:relative;
+  z-index:2;
+}
+/* EXACT TWO SHINE EFFECTS END */
 
 </style>
 
@@ -2022,7 +2033,7 @@ section.simpleSteps .sub{
   <h1 class="heroTitle"><span class="line one">교체보다</span><span class="line two">복원이 먼저입니다</span></h1>
   <div class="slogan">평생보증하는<br>카글라스자동차유리복원</div>
   <p class="desc">서울 전지역 · 경기 일부지역 무료출장<br>사진 한 장만 보내주시면 복원 가능 여부와 예상 비용을 안내해드립니다.</p>
-  <div class="heroWarranty">
+  <div class="heroWarranty kg-shine-target">
     <b>복원 후에도<br>안심할 수 있도록</b>
     <p>시공 품질에 대한 책임감을 담아<br><strong class="kg-warranty-bold">평생보증서</strong>를 발행해드립니다.</p>
   </div>
