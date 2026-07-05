@@ -1566,38 +1566,37 @@ a:active,button:active{
 }
 
 
+
+
 /* WARRANTY MARK ANIMATION START */
-@keyframes warrantyMarkPulse{
-  0%,100%{
-    transform:translateY(0) scale(1);
-    filter:drop-shadow(0 0 10px rgba(8,105,232,.35));
-  }
-  50%{
-    transform:translateY(-4px) scale(1.055);
-    filter:drop-shadow(0 0 22px rgba(80,170,255,.72));
-  }
+@keyframes warrantyIconPulse{
+  0%,100%{transform:translateY(0) scale(1);box-shadow:0 0 18px rgba(8,105,232,.32)}
+  50%{transform:translateY(-4px) scale(1.08);box-shadow:0 0 34px rgba(90,180,255,.72)}
 }
-@keyframes warrantyMarkRing{
-  0%{transform:scale(.88);opacity:.55}
-  70%{transform:scale(1.35);opacity:0}
-  100%{transform:scale(1.35);opacity:0}
+@keyframes warrantyIconRing{
+  0%{transform:translate(-50%,-50%) scale(.82);opacity:.55}
+  75%{transform:translate(-50%,-50%) scale(1.45);opacity:0}
+  100%{transform:translate(-50%,-50%) scale(1.45);opacity:0}
 }
-.warranty-mark-animate{
+.warrantyIcon.warranty-mark-animate{
   position:relative !important;
-  animation:warrantyMarkPulse 2.8s ease-in-out infinite !important;
+  overflow:visible !important;
+  animation:warrantyIconPulse 2.6s ease-in-out infinite !important;
+  z-index:2;
 }
-.warranty-mark-animate::after{
+.warrantyIcon.warranty-mark-animate::after{
   content:"";
   position:absolute;
   left:50%;
   top:50%;
-  width:84px;
-  height:84px;
+  width:78px;
+  height:78px;
   border-radius:50%;
-  border:1px solid rgba(100,190,255,.42);
-  transform:translate(-50%,-50%) scale(.88);
-  animation:warrantyMarkRing 2.8s ease-out infinite;
+  border:2px solid rgba(90,180,255,.42);
+  transform:translate(-50%,-50%) scale(.82);
+  animation:warrantyIconRing 2.6s ease-out infinite;
   pointer-events:none;
+  z-index:-1;
 }
 /* WARRANTY MARK ANIMATION END */
 
@@ -2106,7 +2105,7 @@ section.simpleSteps .sub{
     <p class="warrantyLead">시공 품질에 대한 책임감을 담아<br>모든 복원 차량에 <strong>평생보증서</strong>를 발행해드립니다.</p>
     <a class="warrantyDetailBtn" href="javascript:void(0)" target="_blank" rel="noopener" onclick="return false;" aria-disabled="true">롱크랙도 평생보증이 가능합니다.</a>
     <div class="warrantyInnerCard">
-      <div class="warrantyIcon">🛡️</div>
+      <div class="warrantyIcon warranty-mark-animate">🛡️</div>
       <b>평생보증서 발행</b>
       <p>복원 부위에 대해 기간 제한 없이<br>재복원 및 A/S를 보장합니다.</p>
     </div>
