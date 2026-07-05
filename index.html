@@ -2244,6 +2244,39 @@ section.simpleSteps .sub{
 .quick.quickMovedCta{padding-top:6px!important;}
 
 .fleetSection{padding-top:26px!important;}
+
+
+/* premium navy+gold notice box */
+.noticeBox{
+  background:linear-gradient(145deg,#1c3f63 0%,#183754 55%,#152f49 100%)!important;
+  border:1.5px solid rgba(214,178,110,.5)!important;
+  box-shadow:0 12px 26px rgba(6,20,40,.24),inset 0 1px 0 rgba(255,255,255,.07)!important;
+  animation:none!important;
+}
+.noticeBox::before{
+  content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:linear-gradient(135deg,rgba(214,178,110,.14),transparent 42%);
+}
+.noticeIcon,.noticeIcon.kgNoticePulse{
+  background:linear-gradient(140deg,#f4d78a,#c99a45)!important;
+  color:#3a2a08!important;
+  box-shadow:0 6px 16px rgba(201,154,69,.4),inset 0 1px 0 rgba(255,255,255,.5)!important;
+  border:1px solid rgba(255,240,205,.6)!important;
+}
+.noticeBox b,.noticeTextLink b{
+  color:#f6ecd4!important;
+}
+.noticeBox span,.noticeTextLink span{
+  color:#d8b877!important;
+}
+
+.noticeIcon,.noticeIcon.kgNoticePulse{
+  background:transparent!important;
+  border:none!important;
+  box-shadow:none!important;
+  padding:0!important;
+}
+.noticeSvg{width:60px;height:60px;display:block;filter:drop-shadow(0 6px 14px rgba(201,154,69,.4));}
 </style>
 
 </head>
@@ -2346,7 +2379,7 @@ section.simpleSteps .sub{
   </div>
 
   <div class="noticeBox">
-    <div class="noticeIcon kgNoticePulse">⚠</div>
+    <div class="noticeIcon kgNoticePulse"><svg class="noticeSvg" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true"><defs><linearGradient id="ngGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbe7bf"/><stop offset="0.5" stop-color="#e6c079"/><stop offset="1" stop-color="#c39a45"/></linearGradient><radialGradient id="ngGloss" cx="0.35" cy="0.28" r="0.75"><stop offset="0" stop-color="#ffffff" stop-opacity="0.55"/><stop offset="0.55" stop-color="#ffffff" stop-opacity="0"/></radialGradient></defs><circle cx="22" cy="22" r="21" fill="url(#ngGold)"/><circle cx="22" cy="22" r="21" fill="url(#ngGloss)"/><circle cx="22" cy="22" r="20" fill="none" stroke="#fff4d8" stroke-opacity="0.55" stroke-width="1"/><rect x="20" y="11" width="4" height="14" rx="2" fill="#3a2a08"/><circle cx="22" cy="31.5" r="2.5" fill="#3a2a08"/></svg></div>
     <div>
       <a class="noticeTextLink" href="https://m.blog.naver.com/carglass_/222106565790" target="_blank" rel="noopener">
         <b>복원 전 꼭 확인하세요</b>
