@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>평생보증하는<br>카글라스자동차유리복원 | 서울·경기 무료출장</title>
-<meta name="description" content="평생보증하는 카글라스자동차유리복원. 서울 전지역·경기 일부지역 무료출장. 롱크랙 전문, 평생보증서 발행, 24시간 상담 신청.">
+<meta name="description" content="평생보증하는 카글라스자동차유리복원. 서울 전지역·경기 일부지역 무료출장. 롱크랙 전문, <span class="warrantyEmphasis">평생보증서</span> 발행, 24시간 상담 신청.">
 <meta name="theme-color" content="#061a33">
 <style>
 :root{--navy:#061a33;--blue:#0869e8;--green:#05a63b;--red:#e50012;--gold:#ffd84a;--light:#f5f8fc}
@@ -59,7 +59,7 @@ url('data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAA
 .formCard label{display:block;color:#0b1e33;font-weight:900;font-size:13px;margin:10px 0 6px}
 .formCard input,.formCard select,.formCard textarea{width:100%;border:1px solid #d8e0eb;border-radius:13px;padding:13px;font-size:15px;font-weight:700;background:#f7f9fc;outline:none}
 .formCard textarea{min-height:82px;resize:vertical}
-.formCard button,.formCard a.submitLink{margin-top:20px;width:100%;height:54px;border:0;border-radius:15px;background:#0869e8;color:#fff;font-size:17px;font-weight:1000;display:flex;align-items:center;justify-content:center;text-decoration:none}
+.formCard button,.formCard a.submitLink{margin-top:12px;width:100%;height:54px;border:0;border-radius:15px;background:#0869e8;color:#fff;font-size:17px;font-weight:1000;display:flex;align-items:center;justify-content:center;text-decoration:none}
 
 .damage{padding:26px 18px;background:#f6f9fd}
 .damage .lead{margin:0 0 14px;color:#536477;font-size:14px;font-weight:750;line-height:1.55}
@@ -1474,6 +1474,44 @@ a:active,button:active{
 .finalCta a{margin-top:20px !important;margin-bottom:0 !important;}
 .finalCta a + a{margin-top:20px !important;}
 
+
+/* WARRANTY CTA HIGHLIGHT ANIMATION START */
+@keyframes warrantyPulseGlow{
+  0%,100%{transform:translateY(0) scale(1);box-shadow:0 10px 28px rgba(30,126,255,.28),0 0 0 rgba(72,160,255,0)}
+  50%{transform:translateY(-2px) scale(1.018);box-shadow:0 14px 34px rgba(30,126,255,.42),0 0 22px rgba(93,174,255,.42)}
+}
+@keyframes warrantyShine{
+  0%{left:-70%}
+  55%,100%{left:125%}
+}
+@keyframes warrantyWordGlow{
+  0%,100%{text-shadow:0 0 0 rgba(96,180,255,0)}
+  50%{text-shadow:0 0 14px rgba(96,180,255,.75)}
+}
+.warrantyLink,
+a[href*="222179968451"]{
+  animation:warrantyPulseGlow 2.4s ease-in-out infinite !important;
+  position:relative;
+  overflow:hidden;
+}
+.warrantyLink::after,
+a[href*="222179968451"]::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-70%;
+  width:45%;
+  height:100%;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,.38),transparent);
+  transform:skewX(-22deg);
+  animation:warrantyShine 3.2s ease-in-out infinite;
+  pointer-events:none;
+}
+.warrantyEmphasis{
+  animation:warrantyWordGlow 2.6s ease-in-out infinite;
+}
+/* WARRANTY CTA HIGHLIGHT ANIMATION END */
+
 </style>
 
 <style id="kg-final-force">
@@ -1527,7 +1565,7 @@ section.simpleSteps .sub{
   color:#5F6B7A!important;
 }
 
-/* 평생보증서 문구: 전체 얇게, 평생보증서만 굵게 */
+/* <span class="warrantyEmphasis">평생보증서</span> 문구: 전체 얇게, 평생보증서만 굵게 */
 .warrantyText,
 .warrantyText *,
 .guaranteeText,
@@ -1568,6 +1606,44 @@ section.simpleSteps .sub{
 .finalCta a{margin-top:20px !important;margin-bottom:0 !important;}
 .finalCta a + a{margin-top:20px !important;}
 
+
+/* WARRANTY CTA HIGHLIGHT ANIMATION START */
+@keyframes warrantyPulseGlow{
+  0%,100%{transform:translateY(0) scale(1);box-shadow:0 10px 28px rgba(30,126,255,.28),0 0 0 rgba(72,160,255,0)}
+  50%{transform:translateY(-2px) scale(1.018);box-shadow:0 14px 34px rgba(30,126,255,.42),0 0 22px rgba(93,174,255,.42)}
+}
+@keyframes warrantyShine{
+  0%{left:-70%}
+  55%,100%{left:125%}
+}
+@keyframes warrantyWordGlow{
+  0%,100%{text-shadow:0 0 0 rgba(96,180,255,0)}
+  50%{text-shadow:0 0 14px rgba(96,180,255,.75)}
+}
+.warrantyLink,
+a[href*="222179968451"]{
+  animation:warrantyPulseGlow 2.4s ease-in-out infinite !important;
+  position:relative;
+  overflow:hidden;
+}
+.warrantyLink::after,
+a[href*="222179968451"]::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-70%;
+  width:45%;
+  height:100%;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,.38),transparent);
+  transform:skewX(-22deg);
+  animation:warrantyShine 3.2s ease-in-out infinite;
+  pointer-events:none;
+}
+.warrantyEmphasis{
+  animation:warrantyWordGlow 2.6s ease-in-out infinite;
+}
+/* WARRANTY CTA HIGHLIGHT ANIMATION END */
+
 </style>
 
 
@@ -1592,6 +1668,44 @@ section.simpleSteps .sub{
 .finalCta p{margin-bottom:24px !important;}
 .finalCta a{margin-top:20px !important;margin-bottom:0 !important;}
 .finalCta a + a{margin-top:20px !important;}
+
+
+/* WARRANTY CTA HIGHLIGHT ANIMATION START */
+@keyframes warrantyPulseGlow{
+  0%,100%{transform:translateY(0) scale(1);box-shadow:0 10px 28px rgba(30,126,255,.28),0 0 0 rgba(72,160,255,0)}
+  50%{transform:translateY(-2px) scale(1.018);box-shadow:0 14px 34px rgba(30,126,255,.42),0 0 22px rgba(93,174,255,.42)}
+}
+@keyframes warrantyShine{
+  0%{left:-70%}
+  55%,100%{left:125%}
+}
+@keyframes warrantyWordGlow{
+  0%,100%{text-shadow:0 0 0 rgba(96,180,255,0)}
+  50%{text-shadow:0 0 14px rgba(96,180,255,.75)}
+}
+.warrantyLink,
+a[href*="222179968451"]{
+  animation:warrantyPulseGlow 2.4s ease-in-out infinite !important;
+  position:relative;
+  overflow:hidden;
+}
+.warrantyLink::after,
+a[href*="222179968451"]::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-70%;
+  width:45%;
+  height:100%;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,.38),transparent);
+  transform:skewX(-22deg);
+  animation:warrantyShine 3.2s ease-in-out infinite;
+  pointer-events:none;
+}
+.warrantyEmphasis{
+  animation:warrantyWordGlow 2.6s ease-in-out infinite;
+}
+/* WARRANTY CTA HIGHLIGHT ANIMATION END */
 
 </style>
 
@@ -1670,6 +1784,44 @@ section.simpleSteps .sub{
 .finalCta a{margin-top:20px !important;margin-bottom:0 !important;}
 .finalCta a + a{margin-top:20px !important;}
 
+
+/* WARRANTY CTA HIGHLIGHT ANIMATION START */
+@keyframes warrantyPulseGlow{
+  0%,100%{transform:translateY(0) scale(1);box-shadow:0 10px 28px rgba(30,126,255,.28),0 0 0 rgba(72,160,255,0)}
+  50%{transform:translateY(-2px) scale(1.018);box-shadow:0 14px 34px rgba(30,126,255,.42),0 0 22px rgba(93,174,255,.42)}
+}
+@keyframes warrantyShine{
+  0%{left:-70%}
+  55%,100%{left:125%}
+}
+@keyframes warrantyWordGlow{
+  0%,100%{text-shadow:0 0 0 rgba(96,180,255,0)}
+  50%{text-shadow:0 0 14px rgba(96,180,255,.75)}
+}
+.warrantyLink,
+a[href*="222179968451"]{
+  animation:warrantyPulseGlow 2.4s ease-in-out infinite !important;
+  position:relative;
+  overflow:hidden;
+}
+.warrantyLink::after,
+a[href*="222179968451"]::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-70%;
+  width:45%;
+  height:100%;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,.38),transparent);
+  transform:skewX(-22deg);
+  animation:warrantyShine 3.2s ease-in-out infinite;
+  pointer-events:none;
+}
+.warrantyEmphasis{
+  animation:warrantyWordGlow 2.6s ease-in-out infinite;
+}
+/* WARRANTY CTA HIGHLIGHT ANIMATION END */
+
 </style>
 
 
@@ -1700,6 +1852,44 @@ section.simpleSteps .sub{
 .finalCta a{margin-top:20px !important;margin-bottom:0 !important;}
 .finalCta a + a{margin-top:20px !important;}
 
+
+/* WARRANTY CTA HIGHLIGHT ANIMATION START */
+@keyframes warrantyPulseGlow{
+  0%,100%{transform:translateY(0) scale(1);box-shadow:0 10px 28px rgba(30,126,255,.28),0 0 0 rgba(72,160,255,0)}
+  50%{transform:translateY(-2px) scale(1.018);box-shadow:0 14px 34px rgba(30,126,255,.42),0 0 22px rgba(93,174,255,.42)}
+}
+@keyframes warrantyShine{
+  0%{left:-70%}
+  55%,100%{left:125%}
+}
+@keyframes warrantyWordGlow{
+  0%,100%{text-shadow:0 0 0 rgba(96,180,255,0)}
+  50%{text-shadow:0 0 14px rgba(96,180,255,.75)}
+}
+.warrantyLink,
+a[href*="222179968451"]{
+  animation:warrantyPulseGlow 2.4s ease-in-out infinite !important;
+  position:relative;
+  overflow:hidden;
+}
+.warrantyLink::after,
+a[href*="222179968451"]::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-70%;
+  width:45%;
+  height:100%;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,.38),transparent);
+  transform:skewX(-22deg);
+  animation:warrantyShine 3.2s ease-in-out infinite;
+  pointer-events:none;
+}
+.warrantyEmphasis{
+  animation:warrantyWordGlow 2.6s ease-in-out infinite;
+}
+/* WARRANTY CTA HIGHLIGHT ANIMATION END */
+
 </style>
 
 
@@ -1725,6 +1915,44 @@ section.simpleSteps .sub{
 .finalCta p{margin-bottom:24px !important;}
 .finalCta a{margin-top:20px !important;margin-bottom:0 !important;}
 .finalCta a + a{margin-top:20px !important;}
+
+
+/* WARRANTY CTA HIGHLIGHT ANIMATION START */
+@keyframes warrantyPulseGlow{
+  0%,100%{transform:translateY(0) scale(1);box-shadow:0 10px 28px rgba(30,126,255,.28),0 0 0 rgba(72,160,255,0)}
+  50%{transform:translateY(-2px) scale(1.018);box-shadow:0 14px 34px rgba(30,126,255,.42),0 0 22px rgba(93,174,255,.42)}
+}
+@keyframes warrantyShine{
+  0%{left:-70%}
+  55%,100%{left:125%}
+}
+@keyframes warrantyWordGlow{
+  0%,100%{text-shadow:0 0 0 rgba(96,180,255,0)}
+  50%{text-shadow:0 0 14px rgba(96,180,255,.75)}
+}
+.warrantyLink,
+a[href*="222179968451"]{
+  animation:warrantyPulseGlow 2.4s ease-in-out infinite !important;
+  position:relative;
+  overflow:hidden;
+}
+.warrantyLink::after,
+a[href*="222179968451"]::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-70%;
+  width:45%;
+  height:100%;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,.38),transparent);
+  transform:skewX(-22deg);
+  animation:warrantyShine 3.2s ease-in-out infinite;
+  pointer-events:none;
+}
+.warrantyEmphasis{
+  animation:warrantyWordGlow 2.6s ease-in-out infinite;
+}
+/* WARRANTY CTA HIGHLIGHT ANIMATION END */
 
 </style>
 
@@ -1847,6 +2075,44 @@ section.simpleSteps .sub{
 .finalCta a{margin-top:20px !important;margin-bottom:0 !important;}
 .finalCta a + a{margin-top:20px !important;}
 
+
+/* WARRANTY CTA HIGHLIGHT ANIMATION START */
+@keyframes warrantyPulseGlow{
+  0%,100%{transform:translateY(0) scale(1);box-shadow:0 10px 28px rgba(30,126,255,.28),0 0 0 rgba(72,160,255,0)}
+  50%{transform:translateY(-2px) scale(1.018);box-shadow:0 14px 34px rgba(30,126,255,.42),0 0 22px rgba(93,174,255,.42)}
+}
+@keyframes warrantyShine{
+  0%{left:-70%}
+  55%,100%{left:125%}
+}
+@keyframes warrantyWordGlow{
+  0%,100%{text-shadow:0 0 0 rgba(96,180,255,0)}
+  50%{text-shadow:0 0 14px rgba(96,180,255,.75)}
+}
+.warrantyLink,
+a[href*="222179968451"]{
+  animation:warrantyPulseGlow 2.4s ease-in-out infinite !important;
+  position:relative;
+  overflow:hidden;
+}
+.warrantyLink::after,
+a[href*="222179968451"]::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-70%;
+  width:45%;
+  height:100%;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,.38),transparent);
+  transform:skewX(-22deg);
+  animation:warrantyShine 3.2s ease-in-out infinite;
+  pointer-events:none;
+}
+.warrantyEmphasis{
+  animation:warrantyWordGlow 2.6s ease-in-out infinite;
+}
+/* WARRANTY CTA HIGHLIGHT ANIMATION END */
+
 </style>
 
 
@@ -1889,6 +2155,44 @@ section.simpleSteps .sub{
 .finalCta a{margin-top:20px !important;margin-bottom:0 !important;}
 .finalCta a + a{margin-top:20px !important;}
 
+
+/* WARRANTY CTA HIGHLIGHT ANIMATION START */
+@keyframes warrantyPulseGlow{
+  0%,100%{transform:translateY(0) scale(1);box-shadow:0 10px 28px rgba(30,126,255,.28),0 0 0 rgba(72,160,255,0)}
+  50%{transform:translateY(-2px) scale(1.018);box-shadow:0 14px 34px rgba(30,126,255,.42),0 0 22px rgba(93,174,255,.42)}
+}
+@keyframes warrantyShine{
+  0%{left:-70%}
+  55%,100%{left:125%}
+}
+@keyframes warrantyWordGlow{
+  0%,100%{text-shadow:0 0 0 rgba(96,180,255,0)}
+  50%{text-shadow:0 0 14px rgba(96,180,255,.75)}
+}
+.warrantyLink,
+a[href*="222179968451"]{
+  animation:warrantyPulseGlow 2.4s ease-in-out infinite !important;
+  position:relative;
+  overflow:hidden;
+}
+.warrantyLink::after,
+a[href*="222179968451"]::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-70%;
+  width:45%;
+  height:100%;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,.38),transparent);
+  transform:skewX(-22deg);
+  animation:warrantyShine 3.2s ease-in-out infinite;
+  pointer-events:none;
+}
+.warrantyEmphasis{
+  animation:warrantyWordGlow 2.6s ease-in-out infinite;
+}
+/* WARRANTY CTA HIGHLIGHT ANIMATION END */
+
 </style>
 
 <style id="kg-spacing-v4-exact-final">
@@ -1928,6 +2232,44 @@ section.simpleSteps .sub{
 .finalCta p{margin-bottom:24px !important;}
 .finalCta a{margin-top:20px !important;margin-bottom:0 !important;}
 .finalCta a + a{margin-top:20px !important;}
+
+
+/* WARRANTY CTA HIGHLIGHT ANIMATION START */
+@keyframes warrantyPulseGlow{
+  0%,100%{transform:translateY(0) scale(1);box-shadow:0 10px 28px rgba(30,126,255,.28),0 0 0 rgba(72,160,255,0)}
+  50%{transform:translateY(-2px) scale(1.018);box-shadow:0 14px 34px rgba(30,126,255,.42),0 0 22px rgba(93,174,255,.42)}
+}
+@keyframes warrantyShine{
+  0%{left:-70%}
+  55%,100%{left:125%}
+}
+@keyframes warrantyWordGlow{
+  0%,100%{text-shadow:0 0 0 rgba(96,180,255,0)}
+  50%{text-shadow:0 0 14px rgba(96,180,255,.75)}
+}
+.warrantyLink,
+a[href*="222179968451"]{
+  animation:warrantyPulseGlow 2.4s ease-in-out infinite !important;
+  position:relative;
+  overflow:hidden;
+}
+.warrantyLink::after,
+a[href*="222179968451"]::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-70%;
+  width:45%;
+  height:100%;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,.38),transparent);
+  transform:skewX(-22deg);
+  animation:warrantyShine 3.2s ease-in-out infinite;
+  pointer-events:none;
+}
+.warrantyEmphasis{
+  animation:warrantyWordGlow 2.6s ease-in-out infinite;
+}
+/* WARRANTY CTA HIGHLIGHT ANIMATION END */
 
 </style>
 </head>
@@ -2059,7 +2401,7 @@ section.simpleSteps .sub{
       <em>네이버블로그</em>
     </a>
 
-    <a class="ctaCard ctaWarranty" href="https://m.blog.naver.com/carglass_/222179968451" target="_blank" rel="noopener">
+    <a class="ctaCard ctaWarranty warrantyLink" href="https://m.blog.naver.com/carglass_/222179968451" target="_blank" rel="noopener">
       <span class="ctaIcon shield">🛡️</span>
       <strong>평생보증서</strong>
       <span class="divider"></span>
