@@ -1660,52 +1660,58 @@ section.simpleSteps .sub{
 
 
 
-<style id="kg-warranty-text-animation">
+
+
+
+<style id="kg-warranty-final-readable">
 .heroWarranty{
   position:relative!important;
   z-index:2!important;
-  margin-top:26px!important;
+  margin-top:28px!important;
+  margin-bottom:28px!important;
   padding:0!important;
   background:transparent!important;
   box-shadow:none!important;
   border:none!important;
+  border-radius:0!important;
   text-align:center!important;
   color:#fff!important;
 }
 .heroWarranty b{
   display:block!important;
   color:#8FD3FF!important;
-  font-size:23px!important;
-  line-height:1.32!important;
-  font-weight:850!important;
-  letter-spacing:-1px!important;
-  margin:0 0 12px!important;
-  animation:kgWarrantyTitleGlow 2.4s ease-in-out infinite!important;
+  font-size:22px!important;
+  line-height:1.35!important;
+  font-weight:620!important;
+  letter-spacing:-.8px!important;
+  margin:0 0 18px!important;
+  text-shadow:0 0 8px rgba(143,211,255,.22)!important;
+  animation:kgWarrantySoftGlow 2.8s ease-in-out infinite!important;
 }
 .heroWarranty p{
   margin:0!important;
-  color:rgba(255,255,255,.92)!important;
+  color:rgba(255,255,255,.94)!important;
   font-size:17px!important;
-  line-height:1.65!important;
-  font-weight:650!important;
-  letter-spacing:-.4px!important;
+  line-height:1.7!important;
+  font-weight:620!important;
+  letter-spacing:-.35px!important;
 }
 .heroWarranty .kg-warranty-bold{
   color:#8FD3FF!important;
-  font-weight:850!important;
-  animation:kgWarrantyWordGlow 2.4s ease-in-out infinite!important;
+  font-weight:620!important;
+  text-shadow:0 0 8px rgba(143,211,255,.22)!important;
+  animation:kgWarrantySoftGlow 2.8s ease-in-out infinite!important;
+}
+.hero .stats{
+  margin-top:30px!important;
+}
+@keyframes kgWarrantySoftGlow{
+  0%,100%{opacity:.92;text-shadow:0 0 4px rgba(143,211,255,.12)}
+  50%{opacity:1;text-shadow:0 0 12px rgba(143,211,255,.36)}
 }
 .finalCta .primary{
   background:#fff!important;
   color:#082243!important;
-}
-@keyframes kgWarrantyTitleGlow{
-  0%,100%{opacity:.92;text-shadow:0 0 0 rgba(255,216,74,0)}
-  50%{opacity:1;text-shadow:0 0 12px rgba(143,211,255,.35)}
-}
-@keyframes kgWarrantyWordGlow{
-  0%,100%{text-shadow:0 0 0 rgba(255,216,74,0)}
-  50%{text-shadow:0 0 10px rgba(143,211,255,.35)}
 }
 </style>
 
