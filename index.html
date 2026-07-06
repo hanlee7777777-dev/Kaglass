@@ -2314,6 +2314,14 @@ section.simpleSteps .sub{
 .slogan{color:#fbfcfe!important;}
 .slogan .sloganGold{color:#f0c968!important;}
 .premiumWarrantyBox .warrantyGold{color:#f0c968!important;}
+.hero .premiumWarrantyBox h3,.hero .premiumWarrantyBox h3 em{font-weight:750!important;}
+.premiumWarrantyBox .warrantyInnerCard b.warrantyGold{font-weight:750!important;}
+.heroNotice{position:relative!important;border-width:2px!important;}
+.heroNotice::after{content:"";position:absolute;inset:-2px;border-radius:24px;pointer-events:none;z-index:2;border:1px solid rgba(240,201,104,0);box-shadow:0 0 0 0 rgba(240,201,104,0);animation:noticeGoldGlow 4.5s ease-in-out infinite;}
+@keyframes noticeGoldGlow{
+  0%,40%,100%{border-color:rgba(240,201,104,0);box-shadow:0 0 0 0 rgba(240,201,104,0);}
+  65%{border-color:rgba(240,200,110,1);box-shadow:0 0 26px 4px rgba(230,180,90,.55);}
+}
 .fleetSection .fleetSub{font-size:19px!important;font-weight:600!important;}
 .warrantyTopline{font-size:13px!important;font-weight:500!important;color:#5a9cf0!important;}
 .finalCta p{font-weight:500!important;}
