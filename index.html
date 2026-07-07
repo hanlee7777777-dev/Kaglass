@@ -93,7 +93,7 @@ url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYI
 
 .bottom{position:fixed;left:50%;bottom:0;transform:translateX(-50%);width:100%;max-width:430px;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px;padding:9px 9px 10px;border-top:1px solid #dce5ef;z-index:80}
 .bottom a{text-decoration:none;color:#fff;height:55px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-weight:1000;font-size:15px}
-.bottom .bTel{background:#0869e8;animation:pulse 1.4s infinite}.bottom .bKakao{background:#ffdf00;color:#111}.bottom .bBlog{background:#05a63b}
+.bottom .bTel{background:#0869e8;animation:pulse 1.4s infinite}.bottom .bKakao{background:#f7c600;color:#111;border:1.5px solid #d9a800}.bottom .bBlog{background:#05a63b}
 .stats div:nth-child(2){animation-delay:.18s}.stats div:nth-child(3){animation-delay:.36s}@keyframes softFloat{0%,100%{transform:translateY(0);box-shadow:0 10px 26px rgba(0,80,180,.18)}50%{transform:translateY(-7px);box-shadow:0 18px 34px rgba(0,105,232,.25)}}@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
 
 @media(max-width:370px){
@@ -463,7 +463,7 @@ url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYI
   font-weight:1000!important;
 }
 .stepText p{
-  font-size:16px!important;
+  font-size:20px!important;
   line-height:1.65!important;
   color:#596878!important;
   font-weight:850!important;
@@ -517,7 +517,7 @@ url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYI
   .stepRow{grid-template-columns:62px 1fr!important;gap:14px!important}
   .stepIcon{width:62px!important;height:62px!important;font-size:29px!important}
   .stepText b{font-size:21px!important}
-  .stepText p{font-size:14px!important}
+  .stepText p{font-size:18px!important}
 }
 
 
@@ -1791,8 +1791,8 @@ section.simpleSteps .stepText b{
   letter-spacing:-.3px!important;
 }
 section.simpleSteps .stepText p{
-  font-size:13px!important;
-  line-height:1.5!important;
+  font-size:15px!important;
+  line-height:1.55!important;
   font-weight:400!important;
   color:#5F6B7A!important;
   margin:4px 0 0!important;
@@ -1807,7 +1807,7 @@ section.simpleSteps h2{
   font-weight:620!important;
 }
 section.simpleSteps .sub{
-  font-size:15px!important;
+  font-size:16px!important;
   font-weight:480!important;
   color:#5F6B7A!important;
 }
@@ -2328,6 +2328,10 @@ section.simpleSteps .sub{
 /* unify bottom buttons: stop scale pulse, keep subtle glow */
 .bottom .bTel{animation:bTelGlow 1.6s ease-in-out infinite!important;transform:none!important;}
 @keyframes bTelGlow{0%,100%{box-shadow:0 0 0 rgba(8,105,232,0)}50%{box-shadow:0 0 16px rgba(8,105,232,.55)}}
+.bottom .bKakao{animation:bKakaoGlow 1.6s ease-in-out infinite!important;transform:none!important;}
+@keyframes bKakaoGlow{0%,100%{box-shadow:0 0 0 rgba(247,198,0,0)}50%{box-shadow:0 0 16px rgba(247,198,0,.7)}}
+.bottom .bBlog{animation:bBlogGlow 1.6s ease-in-out infinite!important;transform:none!important;}
+@keyframes bBlogGlow{0%,100%{box-shadow:0 0 0 rgba(5,166,59,0)}50%{box-shadow:0 0 16px rgba(5,166,59,.55)}}
 .bottom{grid-template-columns:1fr 1fr 1fr!important;}
 .bottom a{font-size:16px!important;font-weight:600!important;}
 
@@ -2371,9 +2375,9 @@ body.subOpen{overflow:hidden}
 #subPage a{color:inherit}
 #subPage .nav{position:sticky;top:0;z-index:30;background:rgba(246,244,240,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--sub-line)}
 #subPage .nav .wrap{display:flex;align-items:center;height:56px}
-#subPage .back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:var(--sub-ink-2);font-size:14px;font-weight:600}
+#subPage .back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:var(--sub-ink-2);font-size:17px;font-weight:600}
 #subPage .back:hover{color:var(--sub-ink)}
-#subPage .back .arw{font-size:17px;line-height:1}
+#subPage .back .arw{font-size:20px;line-height:1}
 #subPage .hero{background:linear-gradient(168deg,#0f2038 0%,#18324f 60%,#1d3a5c 100%);color:#fff;position:relative;overflow:hidden;padding:52px 0 48px}
 #subPage .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,98,.55),transparent)}
 #subPage .hero::before{content:"";position:absolute;top:-45%;right:-25%;width:80%;height:190%;background:radial-gradient(closest-side,rgba(201,168,98,.20),transparent);opacity:.9}
@@ -2410,7 +2414,7 @@ body.subOpen{overflow:hidden}
 #subPage .free span{color:var(--sub-ink-2);font-size:15.5px;font-weight:400}
 #subPage .closing{margin-top:38px;padding:38px 30px;border-radius:18px;text-align:center;background:linear-gradient(180deg,#fdfcf9,#f5f1e8);border:1px solid var(--sub-line);box-shadow:0 1px 2px rgba(21,39,68,.03)}
 #subPage .closing .q-mark{font-size:38px;color:var(--sub-gold-line);line-height:.4;font-family:Georgia,serif}
-#subPage .closing .q{margin:16px 0 12px;font-size:20px;font-weight:750;letter-spacing:-.5px;line-height:1.5}
+#subPage .closing .q{margin:16px 0 12px;font-size:20px;font-weight:500;letter-spacing:-.5px;line-height:1.5}
 #subPage .closing p{margin:0 auto;max-width:92%;color:var(--sub-ink-2);font-size:16px;font-weight:400}
 #subPage .closing .sign{margin-top:22px;font-size:12px;font-weight:800;letter-spacing:4px;color:var(--sub-gold);text-transform:uppercase;display:inline-flex;align-items:center;gap:10px}
 #subPage .closing .sign::before, #subPage .closing .sign::after{content:"";width:18px;height:1px;background:var(--sub-gold-line);opacity:.6}
@@ -2553,7 +2557,7 @@ body.subOpen{overflow:hidden}
       <div class="stepIcon">💬</div>
       <div class="stepText">
         <b>실시간 견적 상담</b>
-        <p>보내주신 사진을 확인하여 전화로 <strong>정확한 수리 비용과 소요 시간</strong>을 안내해 드립니다.</p>
+        <p>보내주신 사진을 확인하여 전화 또는 문자·카카오톡으로 <strong>정확한 수리 비용과 소요 시간</strong>을 안내해 드립니다.</p>
       </div>
     </div>
   </div>
@@ -2564,7 +2568,7 @@ body.subOpen{overflow:hidden}
       <div class="stepIcon">🚘</div>
       <div class="stepText">
         <b>즉시 출장 및 시공</b>
-        <p>원하시는 시간과 장소<strong>(자택·회사 등)</strong>로 기사가 방문하여 복원합니다.</p>
+        <p>원하시는 시간과 장소<strong>(자택·회사 등)</strong>로 직접 방문드려 수리해 드립니다.</p>
       </div>
     </div>
   </div>
@@ -2772,7 +2776,7 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="item caution">
         <span class="cap"><span class="dot"></span>주의</span>
         <h2>사진·설명이 실제와 다를 경우</h2>
-        <p>방문 후, 보내주신 사진과 설명이 실제 상태와 많이 다른 경우 추가비용이 발생될 수 있으며, 수리가 불가능할 경우에는 출장비 4만원이 발생됩니다.</p>
+        <p>방문 후, 보내주신 사진과 설명이 실제 상태와 많이 다른 경우 추가비용이 발생될 수 있으며, 수리가 불가능할 경우에는 출장비가 발생될 수 있습니다.</p>
       </div>
       <div class="item caution">
         <span class="cap"><span class="dot"></span>주의</span>
@@ -2783,8 +2787,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     <div class="closing">
       <div class="q-mark">“</div>
-      <p class="q">유리복원만큼은 ‘싼 게 비지떡’이라는 말이 맞습니다.</p>
-      <p>고급 레진과 뛰어난 기술력으로 고품질 시공을 약속드립니다. 직접 찾아가는 무료 출장 서비스와 합리적인 가격, 최상의 품질로 보답하겠습니다.</p>
+      <p class="q">축적된 기술력을 바탕으로 직접 제작한 전문가용 유리복원 장비와 엄선된 프리미엄 레진을 사용하여, 작은 흠집 하나까지 놓치지 않는 정밀한 복원 기술로 최상의 결과를 제공합니다.</p>
       <div class="sign">Carglass</div>
     </div>
 
