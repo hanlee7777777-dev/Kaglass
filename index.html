@@ -2341,6 +2341,92 @@ section.simpleSteps .sub{
 .caseCard{margin-top:0!important;margin-bottom:18px!important;}
 .caseCard:last-of-type{margin-bottom:0!important;}
 .caseBody h3{font-weight:560!important;font-size:17px!important;}
+
+/* ===== merged subpage styles ===== */
+#subPage{display:none}
+#subPage.open{display:block}
+body.subOpen{overflow:hidden}
+#subPage{
+  --sub-paper:#f4f2ed;
+  --sub-card:#ffffff;
+  --sub-ink:#1a2436;
+  --sub-ink-2:#5a6577;
+  --sub-line:#e6e1d7;
+  --sub-navy:#152744;
+  --sub-gold:#b08d4d;
+  --sub-gold-line:#c9a862;
+  --sub-gold-bg:#f5efe2;
+  --sub-warn:#a4562f;
+  --sub-warn-bg:#f7ece5;
+}
+#subPage *{box-sizing:border-box}
+
+#subPage{
+  background:var(--sub-paper);color:var(--sub-ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR","Segoe UI",Arial,sans-serif;
+  line-height:1.62;-webkit-font-smoothing:antialiased;letter-spacing:-.2px;
+  position:fixed;inset:0;z-index:9999;overflow-y:auto;-webkit-overflow-scrolling:touch;
+}
+#subPage .wrap{max-width:600px;margin:0 auto;padding:0 22px}
+#subPage a{color:inherit}
+#subPage .nav{position:sticky;top:0;z-index:30;background:rgba(246,244,240,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--sub-line)}
+#subPage .nav .wrap{display:flex;align-items:center;height:56px}
+#subPage .back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:var(--sub-ink-2);font-size:14px;font-weight:600}
+#subPage .back:hover{color:var(--sub-ink)}
+#subPage .back .arw{font-size:17px;line-height:1}
+#subPage .hero{background:linear-gradient(168deg,#0f2038 0%,#18324f 60%,#1d3a5c 100%);color:#fff;position:relative;overflow:hidden;padding:52px 0 48px}
+#subPage .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,98,.55),transparent)}
+#subPage .hero::before{content:"";position:absolute;top:-45%;right:-25%;width:80%;height:190%;background:radial-gradient(closest-side,rgba(201,168,98,.20),transparent);opacity:.9}
+#subPage .hero .wrap{position:relative}
+#subPage .hero .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:700;letter-spacing:3px;color:var(--sub-gold-line);text-transform:uppercase;margin-bottom:20px}
+#subPage .hero .eyebrow::before{content:"";width:22px;height:1px;background:var(--sub-gold-line)}
+#subPage .hero h1{margin:0 0 16px;font-size:30px;line-height:1.34;font-weight:800;letter-spacing:-1px}
+#subPage .hero .sub{margin:0;color:#c3d0e2;font-size:17px;font-weight:400;max-width:92%}
+#subPage main{padding:8px 0 40px}
+#subPage .sect{margin-top:44px}
+#subPage .sect-h{display:flex;align-items:baseline;gap:12px;margin:0 0 18px;padding:0 2px}
+#subPage .sect-h .idx{font-size:12px;font-weight:800;letter-spacing:1.5px;color:var(--sub-gold);font-variant-numeric:tabular-nums;padding:2px 0}
+#subPage .sect-h .t{font-size:15px;font-weight:700;letter-spacing:.3px;color:var(--sub-ink-2)}
+#subPage .sect-h .rule{flex:1;height:1px;background:var(--sub-line);align-self:center}
+#subPage .item{background:var(--sub-card);border:1px solid var(--sub-line);border-radius:16px;padding:24px 24px;margin-bottom:12px;position:relative;transition:box-shadow .3s ease,transform .3s ease;box-shadow:0 1px 2px rgba(21,39,68,.03)}
+#subPage .item:hover{box-shadow:0 14px 40px rgba(21,39,68,.10);transform:translateY(-2px)}
+#subPage .item .num{font-size:12px;font-weight:800;color:var(--sub-gold);letter-spacing:2px;font-variant-numeric:tabular-nums;display:block;margin-bottom:11px}
+#subPage .item h2{margin:0 0 8px;font-size:20px;line-height:1.4;font-weight:750;letter-spacing:-.5px}
+#subPage .item p{margin:0;color:var(--sub-ink-2);font-size:16.5px;font-weight:400}
+#subPage .item.caution{border-color:#eeddd3;padding-left:26px}
+#subPage .item.caution::before{content:"";position:absolute;left:0;top:22px;bottom:22px;width:3px;border-radius:2px;background:linear-gradient(180deg,#c47a4f,#a4562f)}
+#subPage .item.caution .cap{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:800;letter-spacing:.8px;color:var(--sub-warn);text-transform:uppercase;margin-bottom:9px}
+#subPage .item.caution .cap .dot{width:5px;height:5px;border-radius:50%;background:var(--sub-warn)}
+#subPage .item .noTag{display:inline-block;margin-top:12px;padding:6px 14px;border-radius:999px;background:var(--sub-warn-bg);color:var(--sub-warn);font-size:13.5px;font-weight:800}
+#subPage .rate{margin-top:12px;background:linear-gradient(160deg,#0f2038,#1d3a5c);border-radius:18px;padding:40px 28px;text-align:center;color:#fff;position:relative;overflow:hidden;box-shadow:0 16px 40px rgba(15,32,56,.18)}
+#subPage .rate::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 80% at 50% 0,rgba(201,168,98,.16),transparent 60%)}
+#subPage .rate .r-in{position:relative}
+#subPage .rate .num{font-size:48px;font-weight:900;letter-spacing:-2px;line-height:1;background:linear-gradient(180deg,#f0d59a,#c9a862);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:10px}
+#subPage .rate h2{margin:0 0 10px;font-size:20px;font-weight:750;letter-spacing:-.4px}
+#subPage .rate p{margin:0 auto;max-width:88%;color:#bccbe0;font-size:16px;font-weight:400}
+#subPage .free{display:flex;align-items:center;gap:16px;margin-top:12px;background:var(--sub-card);border:1px solid var(--sub-line);border-radius:16px;padding:22px 24px;box-shadow:0 1px 2px rgba(21,39,68,.03)}
+#subPage .free .ic{flex:none;width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:var(--sub-gold-bg);border:1px solid #ecdcbb;font-size:22px}
+#subPage .free b{display:block;font-size:18.5px;font-weight:750;letter-spacing:-.4px}
+#subPage .free span{color:var(--sub-ink-2);font-size:15.5px;font-weight:400}
+#subPage .closing{margin-top:38px;padding:38px 30px;border-radius:18px;text-align:center;background:linear-gradient(180deg,#fdfcf9,#f5f1e8);border:1px solid var(--sub-line);box-shadow:0 1px 2px rgba(21,39,68,.03)}
+#subPage .closing .q-mark{font-size:38px;color:var(--sub-gold-line);line-height:.4;font-family:Georgia,serif}
+#subPage .closing .q{margin:16px 0 12px;font-size:20px;font-weight:750;letter-spacing:-.5px;line-height:1.5}
+#subPage .closing p{margin:0 auto;max-width:92%;color:var(--sub-ink-2);font-size:16px;font-weight:400}
+#subPage .closing .sign{margin-top:22px;font-size:12px;font-weight:800;letter-spacing:4px;color:var(--sub-gold);text-transform:uppercase;display:inline-flex;align-items:center;gap:10px}
+#subPage .closing .sign::before, #subPage .closing .sign::after{content:"";width:18px;height:1px;background:var(--sub-gold-line);opacity:.6}
+#subPage .foot{margin-top:34px;text-align:center}
+#subPage .foot a{display:inline-flex;align-items:center;gap:9px;padding:15px 32px;border-radius:13px;background:var(--sub-navy);color:#fff;text-decoration:none;font-size:15px;font-weight:700;letter-spacing:-.2px;transition:background .25s,box-shadow .25s;box-shadow:0 8px 22px rgba(21,39,68,.18)}
+#subPage .foot a:hover{background:#0d1c33;box-shadow:0 12px 28px rgba(21,39,68,.26)}
+@media (max-width:480px){
+#subPage .hero h1{font-size:25px}
+#subPage .hero{padding:38px 0 34px}
+#subPage .rate .num{font-size:40px}
+}
+@media (prefers-reduced-motion:reduce){
+
+#subPage .item{transition:none}
+}
+
 </style>
 
 </head>
@@ -2396,7 +2482,7 @@ section.simpleSteps .sub{
   <div class="noticeBox heroNotice">
     <div class="noticeIcon kgNoticePulse"><svg class="noticeSvg" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true"><defs><linearGradient id="ngGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbe7bf"/><stop offset="0.5" stop-color="#e6c079"/><stop offset="1" stop-color="#c39a45"/></linearGradient><radialGradient id="ngGloss" cx="0.35" cy="0.28" r="0.75"><stop offset="0" stop-color="#ffffff" stop-opacity="0.55"/><stop offset="0.55" stop-color="#ffffff" stop-opacity="0"/></radialGradient></defs><circle cx="22" cy="22" r="21" fill="url(#ngGold)"/><circle cx="22" cy="22" r="21" fill="url(#ngGloss)"/><circle cx="22" cy="22" r="20" fill="none" stroke="#fff4d8" stroke-opacity="0.55" stroke-width="1"/><rect x="20" y="11" width="4" height="14" rx="2" fill="#3a2a08"/><circle cx="22" cy="31.5" r="2.5" fill="#3a2a08"/></svg></div>
     <div>
-      <a class="noticeTextLink" href="https://m.blog.naver.com/carglass_/222106565790" target="_blank" rel="noopener">
+      <a class="noticeTextLink" href="javascript:void(0)" onclick="openNotice()" role="button">
         <b>복원 전 꼭 확인하세요</b>
         <span>조치 방법에 따라 복원율이 달라집니다 · <em class="noticeMore">자세히 보기 ›</em></span>
       </a>
@@ -2548,5 +2634,111 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 </script>
 
+
+<div id="subPage" aria-hidden="true">
+
+
+<nav class="nav">
+  <div class="wrap"><a class="back" href="javascript:void(0)" onclick="closeNotice()"><span class="arw">‹</span> 메인으로 돌아가기</a></div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Before Repair</span>
+    <h1>복원 전<br>주의사항 안내</h1>
+    <p class="sub">조치 방법에 따라 복원율이 크게 달라집니다.<br>시공 전 아래 내용을 꼭 확인해 주세요.</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <section class="sect">
+      <div class="sect-h"><span class="idx">01</span><span class="t">가장 중요한 것</span><span class="rule"></span></div>
+      <div class="item">
+        <span class="num">POINT 1</span>
+        <h2>빠르게 수리할수록 복원율이 높습니다</h2>
+        <p>돌빵 발생 후 아무런 조치를 하지 않고 신속하게 수리를 받으셨을 때 복원율이 가장 우수합니다.</p>
+      </div>
+      <div class="item">
+        <span class="num">POINT 2</span>
+        <h2>시공 후 바로 운행 가능</h2>
+        <p>시공이 끝난 후에는 별도의 주의사항 없이 곧바로 운행하셔도 됩니다.</p>
+      </div>
+    </section>
+
+    <section class="sect">
+      <div class="sect-h"><span class="idx">02</span><span class="t">수리 전, 이것만은 피해주세요</span><span class="rule"></span></div>
+      <div class="item caution">
+        <span class="cap"><span class="dot"></span>주의</span>
+        <h2>수리 직전 습기 금물</h2>
+        <p>수리 직전에는 유리에 습기가 있으면 안 됩니다. 세차 및 워셔액이 동반된 와이퍼 사용을 삼가 주시고, 물걸레나 물티슈로 닦지 말아 주세요.</p>
+        <span class="noTag">복원 직전 습기 No</span>
+      </div>
+      <div class="item caution">
+        <span class="cap"><span class="dot"></span>주의</span>
+        <h2>앞 유리에 열을 가하지 마세요</h2>
+        <p>앞 유리 쪽으로 히터를 틀지 말아 주시고, 지하 주차장이나 그늘진 곳에 주차해 주세요. 유리가 뜨거워지면 크랙이 커질 수 있습니다.</p>
+      </div>
+      <div class="item caution">
+        <span class="cap"><span class="dot"></span>주의</span>
+        <h2>테이프는 효과가 없습니다</h2>
+        <p>테이프를 붙인다고 크랙 진행을 막을 수 없으며, 복원율과도 전혀 상관이 없습니다.</p>
+      </div>
+    </section>
+
+    <section class="sect">
+      <div class="sect-h"><span class="idx">03</span><span class="t">복원 품질에 대하여</span><span class="rule"></span></div>
+      <div class="item">
+        <h2>품질은 기술력에 따라 다릅니다</h2>
+        <p>자동차 유리 복원은 작업자의 기술력과 업체에 따라 품질 차이가 매우 큽니다.</p>
+      </div>
+      <div class="rate">
+        <div class="r-in">
+          <div class="num">70–90%</div>
+          <h2>새 유리처럼은 아니지만, 이만큼 깨끗해집니다</h2>
+          <p>새 유리처럼 만드는 기술은 존재할 수 없습니다. 다만 기술력과 업체에 따라 복원수리를 하면 보통 이 정도까지 깨끗해집니다.</p>
+        </div>
+      </div>
+      <div class="free">
+        <div class="ic">🚗</div>
+        <div><b>출장비 무료</b><span>서울 전지역 · 경기 일부지역 무료 출장</span></div>
+      </div>
+      <div class="free">
+        <div class="ic">📱</div>
+        <div><b>평생보증서 발급</b><span>수리 후 ‘평생보증서’를 문자메시지로 발급해 드립니다</span></div>
+      </div>
+    </section>
+
+    <div class="closing">
+      <div class="q-mark">“</div>
+      <p class="q">유리복원만큼은 ‘싼 게 비지떡’이라는 말이 맞습니다.</p>
+      <p>고급 레진과 뛰어난 기술력으로 고품질 시공을 약속드립니다. 직접 찾아가는 무료 출장 서비스와 합리적인 가격, 최상의 품질로 보답하겠습니다.</p>
+      <div class="sign">Carglass</div>
+    </div>
+
+    <div class="foot">
+      <a href="javascript:void(0)" onclick="closeNotice()"><span>‹</span> 메인으로 돌아가기</a>
+    </div>
+
+  </div>
+</main>
+
+
+</div>
+
+<script>
+function openNotice(){
+  var s=document.getElementById('subPage');
+  s.classList.add('open'); s.setAttribute('aria-hidden','false');
+  document.body.classList.add('subOpen');
+  s.scrollTop=0; window.scrollTo(0,0);
+}
+function closeNotice(){
+  var s=document.getElementById('subPage');
+  s.classList.remove('open'); s.setAttribute('aria-hidden','true');
+  document.body.classList.remove('subOpen');
+}
+</script>
 </body>
 </html>
