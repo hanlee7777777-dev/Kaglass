@@ -2391,7 +2391,7 @@ body.subOpen{overflow:hidden}
 #subPage .item{background:var(--sub-card);border:1px solid var(--sub-line);border-radius:16px;padding:24px 24px;margin-bottom:12px;position:relative;transition:box-shadow .3s ease,transform .3s ease;box-shadow:0 1px 2px rgba(21,39,68,.03)}
 #subPage .item:hover{box-shadow:0 14px 40px rgba(21,39,68,.10);transform:translateY(-2px)}
 #subPage .item .num{font-size:12px;font-weight:800;color:var(--sub-gold);letter-spacing:2px;font-variant-numeric:tabular-nums;display:block;margin-bottom:11px}
-#subPage .item h2{margin:0 0 8px;font-size:20px;line-height:1.4;font-weight:750;letter-spacing:-.5px}
+#subPage .item h2{margin:0 0 8px;font-size:20px;line-height:1.4;font-weight:650;letter-spacing:-.5px}
 #subPage .item p{margin:0;color:var(--sub-ink-2);font-size:16.5px;font-weight:400}
 #subPage .item.caution{border-color:#eeddd3;padding-left:26px}
 #subPage .item.caution::before{content:"";position:absolute;left:0;top:22px;bottom:22px;width:3px;border-radius:2px;background:linear-gradient(180deg,#c47a4f,#a4562f)}
@@ -2402,7 +2402,7 @@ body.subOpen{overflow:hidden}
 #subPage .rate::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 80% at 50% 0,rgba(201,168,98,.16),transparent 60%)}
 #subPage .rate .r-in{position:relative}
 #subPage .rate .num{font-size:48px;font-weight:900;letter-spacing:-2px;line-height:1;background:linear-gradient(180deg,#f0d59a,#c9a862);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:10px}
-#subPage .rate h2{margin:0 0 10px;font-size:20px;font-weight:750;letter-spacing:-.4px}
+#subPage .rate h2{margin:0 0 10px;font-size:20px;font-weight:650;letter-spacing:-.4px}
 #subPage .rate p{margin:0 auto;max-width:88%;color:#bccbe0;font-size:16px;font-weight:400}
 #subPage .free{display:flex;align-items:center;gap:16px;margin-top:12px;background:var(--sub-card);border:1px solid var(--sub-line);border-radius:16px;padding:22px 24px;box-shadow:0 1px 2px rgba(21,39,68,.03)}
 #subPage .free .ic{flex:none;width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:var(--sub-gold-bg);border:1px solid #ecdcbb;font-size:22px}
@@ -2417,6 +2417,38 @@ body.subOpen{overflow:hidden}
 #subPage .foot{margin-top:34px;text-align:center}
 #subPage .foot a{display:inline-flex;align-items:center;gap:9px;padding:15px 32px;border-radius:13px;background:var(--sub-navy);color:#fff;text-decoration:none;font-size:15px;font-weight:700;letter-spacing:-.2px;transition:background .25s,box-shadow .25s;box-shadow:0 8px 22px rgba(21,39,68,.18)}
 #subPage .foot a:hover{background:#0d1c33;box-shadow:0 12px 28px rgba(21,39,68,.26)}
+
+/* emphasis rebalance: calm the rate stat, spotlight the real benefits */
+#subPage .rate{
+  background:var(--sub-card)!important;border:1px solid var(--sub-line)!important;
+  color:var(--sub-ink)!important;box-shadow:0 1px 2px rgba(21,39,68,.03)!important;
+  padding:32px 26px!important;
+}
+#subPage .rate::after{display:none!important}
+#subPage .rate{text-align:left!important}
+#subPage .rate h2{font-weight:650!important}
+#subPage .rate p{margin-left:0!important;margin-right:0!important;max-width:none!important}
+#subPage .rate h2{color:var(--sub-ink)!important}
+#subPage .rate p{color:var(--sub-ink-2)!important}
+#subPage .rate .num{
+  background:none!important;-webkit-text-fill-color:initial!important;
+  color:var(--sub-gold)!important;font-size:42px!important;
+}
+#subPage .free{
+  background:linear-gradient(158deg,#16294a,#20406b)!important;
+  border:none!important;border-radius:18px!important;padding:24px 24px!important;
+  box-shadow:0 14px 36px rgba(15,32,56,.20)!important;position:relative;overflow:hidden;
+}
+#subPage .free::after{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(120% 90% at 100% 0,rgba(201,168,98,.18),transparent 55%);pointer-events:none;
+}
+#subPage .free .ic{
+  background:rgba(201,168,98,.16)!important;border:1px solid rgba(201,168,98,.4)!important;
+  position:relative;z-index:1;
+}
+#subPage .free b{color:#fff!important;position:relative;z-index:1}
+#subPage .free span{color:#c3d0e2!important;position:relative;z-index:1}
 @media (max-width:480px){
 #subPage .hero h1{font-size:25px}
 #subPage .hero{padding:38px 0 34px}
@@ -2695,9 +2727,8 @@ document.addEventListener('DOMContentLoaded', function(){
       </div>
       <div class="rate">
         <div class="r-in">
-          <div class="num">70–90%</div>
-          <h2>새 유리처럼은 아니지만, 이만큼 깨끗해집니다</h2>
-          <p>새 유리처럼 만드는 기술은 존재할 수 없습니다. 다만 기술력과 업체에 따라 복원수리를 하면 보통 이 정도까지 깨끗해집니다.</p>
+          <h2>새 유리처럼 복원되는 기술은 없습니다</h2>
+          <p>복원을 하면 감쪽같이 안 보이게 복구되는 것으로 잘못 알고 계신 경우가 있습니다. 새 유리처럼 만드는 기술은 존재하지 않아 불가능하지만, 카글라스의 기술력으로 보통 70~90% 깨끗해지며 금이 커지는 것만큼은 완벽하게 예방할 수 있습니다.</p>
         </div>
       </div>
       <div class="free">
