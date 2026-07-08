@@ -19,7 +19,7 @@ html,body{margin:0;padding:0;background:#eef3f8;font-family:-apple-system,BlinkM
 .section{padding:16px 18px}
 .caseCard{border-radius:24px;background:#fff;box-shadow:0 8px 24px rgba(6,26,51,.12);overflow:hidden;margin-bottom:20px;border:1px solid #e6eef7}
 .imageBox{height:210px;background:linear-gradient(135deg,#dce7f2,#f7fbff);display:grid;place-items:center;position:relative}
-.imageBox:before{content:"대표 이미지 영역";font-weight:1000;color:#7b8da1;font-size:18px}
+.imageBox:before{content:"이미지 영역";font-weight:1000;color:#7b8da1;font-size:18px}
 .badge{position:absolute;left:16px;top:16px;background:#061a33;color:#fff;padding:8px 13px;border-radius:999px;font-weight:1000;font-size:13px}
 .body{padding:18px}
 .body h3{margin:0;font-size:22px;font-weight:1000;letter-spacing:-.7px}
@@ -41,35 +41,73 @@ html,body{margin:0;padding:0;background:#eef3f8;font-family:-apple-system,BlinkM
 </head>
 <body>
 <main class="wrap">
-<header class="header"><h1>시공사례</h1><p>카글라스 자동차유리복원 실제 작업 사례</p></header>
-<section class="hero"><h2>실제 복원 사례를<br>확인해보세요.</h2><p>돌빵, 롱크랙, 전면유리 손상 등 다양한 자동차 유리 복원 사례를 정리하는 서브페이지입니다.</p></section>
-<div class="filter"><span>전체</span><span>돌빵 복원</span><span>롱크랙</span><span>수입차</span><span>국산차</span></div>
-<section class="section">
+  <header class="header">
+    <h1>시공사례</h1>
+    <p>카글라스 자동차유리복원 실제 작업 사례</p>
+  </header>
 
-<article class="caseCard">
-<div class="imageBox"><div class="badge">CASE 01</div></div>
-<div class="body"><h3>고속도로 돌빵 복원</h3><p>주행 중 발생한 유리 손상 부위를 확인하고, 균열이 커지기 전 복원 작업을 진행한 사례입니다.</p>
-<div class="beforeAfter"><div class="smallImg"><span>BEFORE</span>전 사진</div><div class="smallImg"><span>AFTER</span>후 사진</div></div>
-<div class="infoBox">이미지는 이 영역에 넣으면 됩니다. 실제 사진을 올려주시면 이 위치에 맞춰 교체할 수 있습니다.</div></div>
-</article>
+  <section class="hero">
+    <h2>실제 복원 사례를<br>확인해보세요.</h2>
+    <p>돌빵, 롱크랙, 전면유리 손상 등 다양한 자동차 유리 복원 사례를 이곳에 정리할 수 있습니다.</p>
+  </section>
 
-<article class="caseCard">
-<div class="imageBox"><div class="badge">CASE 02</div></div>
-<div class="body"><h3>롱크랙 복원</h3><p>긴 크랙 손상도 상태에 따라 복원 가능 여부를 확인하고, 진행 가능 범위 내에서 작업한 사례입니다.</p>
-<div class="beforeAfter"><div class="smallImg"><span>BEFORE</span>전 사진</div><div class="smallImg"><span>AFTER</span>후 사진</div></div>
-<div class="infoBox">롱크랙, 수입차, 국산차 등 분류별로 사례를 계속 추가할 수 있습니다.</div></div>
-</article>
+  <div class="filter">
+    <span>전체</span><span>돌빵 복원</span><span>롱크랙</span><span>수입차</span><span>국산차</span>
+  </div>
 
-<article class="caseCard">
-<div class="imageBox"><div class="badge">CASE 03</div></div>
-<div class="body"><h3>출장 복원 시공</h3><p>고객이 원하는 장소로 방문하여 현장에서 유리 손상 상태를 확인하고 복원한 사례입니다.</p>
-<div class="beforeAfter"><div class="smallImg"><span>BEFORE</span>전 사진</div><div class="smallImg"><span>AFTER</span>후 사진</div></div>
-<div class="infoBox">필요하면 카드 개수를 계속 늘릴 수 있습니다.</div></div>
-</article>
+  <section class="section">
+    <article class="caseCard">
+      <div class="imageBox"><div class="badge">CASE 01</div></div>
+      <div class="body">
+        <h3>고속도로 돌빵 복원</h3>
+        <p>주행 중 발생한 유리 손상 부위를 확인하고, 균열이 커지기 전 복원 작업을 진행한 사례입니다.</p>
+        <div class="beforeAfter">
+          <div class="smallImg"><span>BEFORE</span>전 사진</div>
+          <div class="smallImg"><span>AFTER</span>후 사진</div>
+        </div>
+        <div class="infoBox">이미지는 이 영역에 넣으면 됩니다. 실제 사진을 올려주시면 이 박스 위치에 맞춰 교체할 수 있습니다.</div>
+      </div>
+    </article>
 
-</section>
-<section class="cta"><h2>사진 한 장만<br>보내주세요.</h2><p>복원 가능 여부와 예상 비용을 빠르게 안내해드립니다.</p><a class="call" href="tel:01050687232">전화 상담</a><a class="kakao" href="https://open.kakao.com/o/sbIjoyCi">카카오톡 상담</a></section>
+    <article class="caseCard">
+      <div class="imageBox"><div class="badge">CASE 02</div></div>
+      <div class="body">
+        <h3>롱크랙 복원</h3>
+        <p>긴 크랙 손상도 상태에 따라 복원 가능 여부를 확인하고, 진행 가능 범위 내에서 작업한 사례입니다.</p>
+        <div class="beforeAfter">
+          <div class="smallImg"><span>BEFORE</span>전 사진</div>
+          <div class="smallImg"><span>AFTER</span>후 사진</div>
+        </div>
+        <div class="infoBox">롱크랙, 수입차, 국산차 등 분류별로 사례를 계속 추가할 수 있습니다.</div>
+      </div>
+    </article>
+
+    <article class="caseCard">
+      <div class="imageBox"><div class="badge">CASE 03</div></div>
+      <div class="body">
+        <h3>출장 복원 시공</h3>
+        <p>고객이 원하는 장소로 방문하여 현장에서 유리 손상 상태를 확인하고 복원한 사례입니다.</p>
+        <div class="beforeAfter">
+          <div class="smallImg"><span>BEFORE</span>전 사진</div>
+          <div class="smallImg"><span>AFTER</span>후 사진</div>
+        </div>
+        <div class="infoBox">필요하면 카드 개수를 계속 늘릴 수 있습니다.</div>
+      </div>
+    </article>
+  </section>
+
+  <section class="cta">
+    <h2>사진 한 장만<br>보내주세요.</h2>
+    <p>복원 가능 여부와 예상 비용을 빠르게 안내해드립니다.</p>
+    <a class="call" href="tel:01050687232">전화 상담</a>
+    <a class="kakao" href="https://open.kakao.com/o/sbIjoyCi">카카오톡 상담</a>
+  </section>
 </main>
-<nav class="bottom"><a class="bTel" href="tel:01050687232">전화상담</a><a class="bKakao" href="https://open.kakao.com/o/sbIjoyCi">카카오톡상담</a><a class="bBlog" href="https://m.blog.naver.com/carglass_" target="_blank">네이버블로그</a></nav>
+
+<nav class="bottom">
+  <a class="bTel" href="tel:01050687232">전화상담</a>
+  <a class="bKakao" href="https://open.kakao.com/o/sbIjoyCi">카카오톡상담</a>
+  <a class="bBlog" href="https://m.blog.naver.com/carglass_" target="_blank">네이버블로그</a>
+</nav>
 </body>
 </html>
