@@ -2331,6 +2331,16 @@ section.simpleSteps .sub{
 .blogPromoCard .blogQuote{font-size:46px;line-height:.4;color:#05a63b;font-weight:800;font-family:Georgia,serif;margin:6px 0 4px -1px;}
 .blogPromoCard .blogPromoText p{margin:0;font-size:15px;line-height:1.6;color:#5a6b7e;font-weight:450;}
 .blogPromoBtn{display:block;margin-top:16px;text-align:center;background:#05a63b;color:#fff;font-size:16px;font-weight:700;padding:13px 16px;border-radius:14px;letter-spacing:-.4px;}
+.baGallery{padding:30px 18px 26px;background:linear-gradient(180deg,#f7fbff,#eef5fb);}
+.baGallery h2{text-align:center;font-size:26px;margin:0 0 8px;color:#123456;letter-spacing:-1.2px;font-weight:800;}
+.baGallery .baSub{text-align:center;margin:0 0 20px;color:#5a6b7e;font-size:15px;font-weight:450;}
+.baGrid{display:flex;flex-direction:column;gap:16px;}
+.baPair{display:grid;grid-template-columns:1fr 1fr;gap:10px;background:#fff;border:1.5px solid #e3ecf5;border-radius:20px;padding:12px;box-shadow:0 8px 22px rgba(18,52,86,.06);}
+.baItem{position:relative;margin:0;border-radius:14px;overflow:hidden;aspect-ratio:4/3;background:#eef2f6;}
+.baItem img{width:100%;height:100%;object-fit:cover;display:block;}
+.baTag{position:absolute;top:9px;left:9px;color:#fff;font-size:13px;font-weight:800;padding:5px 12px;border-radius:9px;letter-spacing:-.3px;box-shadow:0 3px 8px rgba(0,0,0,.18);}
+.baTag.before{background:#c0392b;}
+.baTag.after{background:#2a7f92;}
 .warrantyTopline{font-size:13px!important;font-weight:500!important;color:#5a9cf0!important;}
 .finalCta p{font-weight:500!important;}
 /* unify bottom buttons: stop scale pulse, keep subtle glow */
@@ -2530,6 +2540,30 @@ body.subOpen{overflow:hidden}
         <b>복원 전 꼭 확인하세요</b>
         <span>조치 방법에 따라 복원율이 달라집니다 · <em class="noticeMore">자세히 보기 ›</em></span>
       </a>
+    </div>
+  </div>
+</section>
+
+
+<section class="baGallery reveal" aria-label="복원 전후 사례">
+  <h2>복원 전 · 후를 직접 확인하세요</h2>
+  <p class="baSub">실제 고객 차량의 돌빵·크랙 복원 현장입니다.</p>
+  <div class="baGrid">
+    <div class="baPair">
+      <figure class="baItem"><span class="baTag before">복원전</span><img src="https://chungcheong-glass.vercel.app/assets/img/before-1.jpg" alt="복원 전 1" loading="lazy"></figure>
+      <figure class="baItem"><span class="baTag after">복원후</span><img src="https://chungcheong-glass.vercel.app/assets/img/after-1.jpg" alt="복원 후 1" loading="lazy"></figure>
+    </div>
+    <div class="baPair">
+      <figure class="baItem"><span class="baTag before">복원전</span><img src="https://chungcheong-glass.vercel.app/assets/img/before-2.jpg" alt="복원 전 2" loading="lazy"></figure>
+      <figure class="baItem"><span class="baTag after">복원후</span><img src="https://chungcheong-glass.vercel.app/assets/img/after-2.jpg" alt="복원 후 2" loading="lazy"></figure>
+    </div>
+    <div class="baPair">
+      <figure class="baItem"><span class="baTag before">복원전</span><img src="https://chungcheong-glass.vercel.app/assets/img/before-3.jpg" alt="복원 전 3" loading="lazy"></figure>
+      <figure class="baItem"><span class="baTag after">복원후</span><img src="https://chungcheong-glass.vercel.app/assets/img/after-3.jpg" alt="복원 후 3" loading="lazy"></figure>
+    </div>
+    <div class="baPair">
+      <figure class="baItem"><span class="baTag before">복원전</span><img src="https://chungcheong-glass.vercel.app/assets/img/before-4.jpg" alt="복원 전 4" loading="lazy"></figure>
+      <figure class="baItem"><span class="baTag after">복원후</span><img src="https://chungcheong-glass.vercel.app/assets/img/after-4.jpg" alt="복원 후 4" loading="lazy"></figure>
     </div>
   </div>
 </section>
