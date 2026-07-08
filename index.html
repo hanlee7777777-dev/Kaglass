@@ -2353,6 +2353,9 @@ section.simpleSteps .sub{
 .baGallery .baSub{text-align:center;margin:0 0 20px;color:#5a6b7e;font-size:15px;font-weight:450;}
 .baGrid{display:flex;flex-direction:column;gap:16px;}
 .baPair{display:grid;grid-template-columns:1fr 1fr;gap:8px;background:#fff;border:1.5px solid #e3ecf5;border-radius:20px;padding:10px;box-shadow:0 8px 22px rgba(18,52,86,.06);}
+.baPairLink{cursor:pointer;position:relative;transition:transform .15s,box-shadow .15s;}
+.baPairLink:hover,.baPairLink:active{transform:translateY(-2px);box-shadow:0 12px 28px rgba(18,52,86,.14);border-color:#b9d0e6;}
+.baPairLink::after{content:"자세히 보기 →";position:absolute;bottom:10px;right:14px;background:rgba(8,105,232,.92);color:#fff;font-size:12px;font-weight:700;padding:5px 10px;border-radius:8px;z-index:3;box-shadow:0 3px 8px rgba(0,0,0,.2);}
 .baItem{position:relative;margin:0;border-radius:14px;overflow:hidden;aspect-ratio:1/1;background:#eef2f6;}
 .baItem img{width:100%;height:100%;object-fit:cover;display:block;}
 .baTag{position:absolute;top:9px;left:9px;color:#fff;font-size:13px;font-weight:800;padding:5px 12px;border-radius:9px;letter-spacing:-.3px;box-shadow:0 3px 8px rgba(0,0,0,.18);}
@@ -2399,7 +2402,7 @@ section.simpleSteps .sub{
 #subPage2 .baNote2{margin:18px 4px 0;color:#8593a4;font-size:13px;font-weight:450;line-height:1.55;letter-spacing:-.3px;}
 #subPage.open{display:block}
 body.subOpen{overflow:hidden}
-#subPage{
+#subPage,#subPage2{
   --sub-paper:#f4f2ed;
   --sub-card:#ffffff;
   --sub-ink:#1a2436;
@@ -2414,12 +2417,14 @@ body.subOpen{overflow:hidden}
 }
 #subPage,#subPage2 *{box-sizing:border-box}
 
-#subPage{
+#subPage,#subPage2{
   background:var(--sub-paper);color:var(--sub-ink);
   font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR","Segoe UI",Arial,sans-serif;
   line-height:1.62;-webkit-font-smoothing:antialiased;letter-spacing:-.2px;
   position:fixed;inset:0;z-index:9999;overflow-y:auto;-webkit-overflow-scrolling:touch;
+  display:none;
 }
+#subPage.open,#subPage2.open{display:block!important;}
 #subPage,#subPage2 .wrap{max-width:600px;margin:0 auto;padding:0 22px}
 #subPage,#subPage2 a{color:inherit}
 #subPage,#subPage2 .nav{position:sticky;top:0;z-index:30;background:rgba(246,244,240,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--sub-line)}
@@ -2584,7 +2589,7 @@ body.subOpen{overflow:hidden}
       <figure class="baItem"><span class="baTag before">복원전</span><img src="https://chungcheong-glass.vercel.app/assets/img/before-1.jpg" alt="복원 전 1" loading="lazy"></figure>
       <figure class="baItem"><span class="baTag after">복원후</span><img src="https://chungcheong-glass.vercel.app/assets/img/after-1.jpg" alt="복원 후 1" loading="lazy"></figure>
     </div>
-    <div class="baPair">
+    <div class="baPair baPairLink" id="e300PairLink" role="button" tabindex="0">
       <figure class="baItem"><span class="baTag before">복원전</span><img src="https://chungcheong-glass.vercel.app/assets/img/before-2.jpg" alt="복원 전 2" loading="lazy"></figure>
       <figure class="baItem"><span class="baTag after">복원후</span><img src="https://chungcheong-glass.vercel.app/assets/img/after-2.jpg" alt="복원 후 2" loading="lazy"></figure>
     </div>
@@ -2664,7 +2669,6 @@ body.subOpen{overflow:hidden}
 
 
 <section class="cases reveal">
-  <a class="caseCard" href="javascript:void(0)" onclick="openNotice2()" role="button"><div class="caseImg chip1"><span>돌빵 수리</span></div><div class="caseBody"><h3>벤츠 E300 앞유리 돌빵 복원</h3><p>출장 방문 후 20분 만에 깨끗하게 복원 완료.</p><div class="more">복원 사례 자세히 보기 →</div></div></a>
   <a class="caseCard" href="https://m.blog.naver.com/carglass_/222367041927" target="_blank"><div class="caseImg chip1"><span>돌빵 수리</span></div><div class="caseBody"><h3>고속도로 주행 중 발생한 돌빵 복원</h3><p>작은 손상도 방치하면 크랙이 길어질 수 있습니다.</p><div class="more">네이버 블로그에서 시공사례 보기 →</div></div></a>
   <a class="caseCard" href="https://m.blog.naver.com/carglass_/222110881086" target="_blank"><div class="caseImg crack2"><span>롱크랙 수리</span></div><div class="caseBody"><h3>앞유리 롱크랙 출장 복원</h3><p>긴 균열은 사진 상담 후 가능 여부를 안내합니다.</p><div class="more">네이버 블로그에서 시공사례 보기 →</div></div></a>
 </section>
@@ -2960,15 +2964,23 @@ function closeNotice(){
 }
 function openNotice2(){
   var s=document.getElementById('subPage2');
+  if(!s) return;
   s.classList.add('open'); s.setAttribute('aria-hidden','false');
   document.body.classList.add('subOpen');
   s.scrollTop=0; window.scrollTo(0,0);
 }
 function closeNotice2(){
   var s=document.getElementById('subPage2');
+  if(!s) return;
   s.classList.remove('open'); s.setAttribute('aria-hidden','true');
   document.body.classList.remove('subOpen');
 }
+document.addEventListener('DOMContentLoaded',function(){
+  var lnk=document.getElementById('e300PairLink');
+  if(lnk){
+    lnk.addEventListener('click',function(e){e.preventDefault();openNotice2();});
+  }
+});
 </script>
 </body>
 </html>
