@@ -6025,7 +6025,7 @@ function _qScrollTo(){
 }
 var __openFns={'1':openNotice,'2':openNotice2,'3':openNotice3,'4':openNotice4,'5':openNotice5,'6':openNotice6,'7':openNotice7,'8':openNotice8,'9':openNotice9,'10':openNotice10,'11':openNotice11,'12':openNotice12,'13':openNotice13,'14':openNotice14};
 var __closeFns={'1':closeNotice,'2':closeNotice2,'3':closeNotice3,'4':closeNotice4,'5':closeNotice5,'6':closeNotice6,'7':closeNotice7,'8':closeNotice8,'9':closeNotice9,'10':closeNotice10,'11':closeNotice11,'12':closeNotice12,'13':closeNotice13,'14':closeNotice14};
-function __closeAllSub(){
+function __closeAllSub(keepBody){
   var s0=document.getElementById('subPage');
   if(s0 && s0.classList.contains('open')){
     s0.classList.remove('open'); s0.setAttribute('aria-hidden','true');
@@ -6036,28 +6036,11 @@ function __closeAllSub(){
       s.style.display='none'; s.setAttribute('aria-hidden','true');
     }
   });
-  document.body.classList.remove('subOpen');
-}
-function __smoothScrollTop(duration){
-  var start = window.pageYOffset || document.documentElement.scrollTop;
-  if(start<=0){ return Promise.resolve(); }
-  var startTime=null;
-  return new Promise(function(resolve){
-    function step(ts){
-      if(!startTime) startTime=ts;
-      var progress = Math.min((ts-startTime)/duration,1);
-      var ease = 1-Math.pow(1-progress,3);
-      window.scrollTo(0, start*(1-ease));
-      if(progress<1) requestAnimationFrame(step); else resolve();
-    }
-    requestAnimationFrame(step);
-  });
+  if(!keepBody){ document.body.classList.remove('subOpen'); }
 }
 function __jumpTo(n){
-  __smoothScrollTop(450).then(function(){
-    __closeAllSub();
-    if(__openFns[n]) __openFns[n]();
-  });
+  __closeAllSub(true);
+  if(__openFns[n]) __openFns[n]();
 }
 function __goHome(){
   __closeAllSub();
