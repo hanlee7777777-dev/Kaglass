@@ -6038,9 +6038,26 @@ function __closeAllSub(){
   });
   document.body.classList.remove('subOpen');
 }
+function __smoothScrollTop(duration){
+  var start = window.pageYOffset || document.documentElement.scrollTop;
+  if(start<=0){ return Promise.resolve(); }
+  var startTime=null;
+  return new Promise(function(resolve){
+    function step(ts){
+      if(!startTime) startTime=ts;
+      var progress = Math.min((ts-startTime)/duration,1);
+      var ease = 1-Math.pow(1-progress,3);
+      window.scrollTo(0, start*(1-ease));
+      if(progress<1) requestAnimationFrame(step); else resolve();
+    }
+    requestAnimationFrame(step);
+  });
+}
 function __jumpTo(n){
-  __closeAllSub();
-  if(__openFns[n]) __openFns[n]();
+  __smoothScrollTop(450).then(function(){
+    __closeAllSub();
+    if(__openFns[n]) __openFns[n]();
+  });
 }
 function __goHome(){
   __closeAllSub();
