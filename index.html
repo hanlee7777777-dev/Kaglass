@@ -4078,7 +4078,7 @@ body.subOpen main.mobile{display:none}
 .item{cursor:pointer;transition:transform .15s ease;-webkit-tap-highlight-color:transparent;}
 .baNote2{cursor:pointer;-webkit-tap-highlight-color:transparent;}
 .carTypes > div,.fleetLogoImageWrap{cursor:pointer;-webkit-tap-highlight-color:transparent;}
-.item.itemPop{transform:scale(1.1);}
+.item.itemPop{transform:scale(1.2);}
 .item.caution::before{display:none!important;}
 .carTypes div{background:#fff!important;}
 .carTypes .carPhoto{background:#fff!important;}
@@ -4098,17 +4098,17 @@ body.subOpen main.mobile{display:none}
   transition:transform .15s ease,box-shadow .15s ease!important;
 }
 .item:active,.closing:active,.rate:active,.carTypes>div:active,.fleetLogoImageWrap:active,.fleetHero:active,.baNote2:active,.free:active,.stepCard:active,.stepItem:active{
-  transform:scale(1.1)!important;
+  transform:scale(1.2)!important;
   box-shadow:0 10px 26px rgba(21,39,68,.18)!important;
 }
 .welcomeWrap:active{
-  transform:scale(1.1)!important;
+  transform:scale(1.2)!important;
 }
 .hero[data-home]{cursor:pointer;-webkit-tap-highlight-color:transparent;}
 </style>
 
 </head>
-<body>
+<body ontouchstart="">
 <main class="mobile">
 <header class="top">
   <div class="logo">
@@ -4338,6 +4338,7 @@ body.subOpen main.mobile{display:none}
 </main>
 
 <script>
+document.addEventListener('touchstart', function(){}, {passive:true});
 const observer = new IntersectionObserver((entries)=>{
   entries.forEach(entry=>{
     if(entry.isIntersecting) entry.target.classList.add('show');
@@ -5582,7 +5583,7 @@ document.addEventListener('DOMContentLoaded', function(){
     <section class="sect">
       <div class="free" style="margin-top:8px;">
         <div class="ic">🏆</div>
-        <div><b>10년 이상 · 3만대 이상 시공 경험</b><span>축적된 노하우로 흔적을 최소화하는 정밀 시공</span></div>
+        <div><b>3만대 이상 시공 경험과 노하우</b><span>축적된 노하우로 흔적을 최소화하는 정밀 시공</span></div>
       </div>
       <div class="free">
         <div class="ic">🚗</div>
