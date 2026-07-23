@@ -4069,15 +4069,16 @@ body.subOpen main.mobile{display:none}
   .subFoot3{max-width:700px!important;}
   [id^="subPage"]{left:50%!important;right:auto!important;margin-left:-350px!important;width:100%!important;max-width:700px!important;box-shadow:0 0 60px rgba(0,0,0,.3);}
 }
-.free{cursor:pointer;}
+.free{cursor:pointer;-webkit-tap-highlight-color:transparent;}
 .free .ic.icShake, .stepIcon.icShake, .stepIc.icShake{animation:freeIconShake .4s cubic-bezier(.36,.07,.19,.97);}
-.stepCard{cursor:pointer;}
-.stepItem{cursor:pointer;}
+.stepCard{cursor:pointer;-webkit-tap-highlight-color:transparent;}
+.stepItem{cursor:pointer;-webkit-tap-highlight-color:transparent;}
+.welcomeWrap{cursor:pointer;-webkit-tap-highlight-color:transparent;}
 .free .ic,.stepIcon,.stepIc{box-shadow:0 4px 10px rgba(0,0,0,.18);}
 .item{cursor:pointer;transition:transform .15s ease;-webkit-tap-highlight-color:transparent;}
 .baNote2{cursor:pointer;-webkit-tap-highlight-color:transparent;}
 .carTypes > div,.fleetLogoImageWrap{cursor:pointer;-webkit-tap-highlight-color:transparent;}
-.item.itemPop{transform:scale(1.05);}
+.item.itemPop{transform:scale(1.1);}
 .item.caution::before{display:none!important;}
 .carTypes div{background:#fff!important;}
 .carTypes .carPhoto{background:#fff!important;}
@@ -4092,6 +4093,16 @@ body.subOpen main.mobile{display:none}
   50%{transform:translate3d(9px,0,0) rotate(12deg);}
   75%{transform:translate3d(-6px,0,0) rotate(-8deg);}
   100%{transform:translate3d(0,0,0) rotate(0);}
+}
+.item,.closing,.rate,.carTypes>div,.fleetLogoImageWrap,.fleetHero,.baNote2,.free,.stepCard,.stepItem,.welcomeWrap{
+  transition:transform .15s ease,box-shadow .15s ease!important;
+}
+.item:active,.closing:active,.rate:active,.carTypes>div:active,.fleetLogoImageWrap:active,.fleetHero:active,.baNote2:active,.free:active,.stepCard:active,.stepItem:active{
+  transform:scale(1.1)!important;
+  box-shadow:0 10px 26px rgba(21,39,68,.18)!important;
+}
+.welcomeWrap:active{
+  transform:scale(1.1)!important;
 }
 </style>
 
@@ -6164,17 +6175,8 @@ document.addEventListener('click', function(e){
   ic.classList.add('icShake');
 });
 
-document.addEventListener('click', function(e){
-  var itemBox = e.target.closest('.item') || e.target.closest('.closing') || e.target.closest('.rate') || e.target.closest('.carTypes > div') || e.target.closest('.fleetLogoImageWrap') || e.target.closest('.fleetHero') || e.target.closest('.baNote2');
-  if(!itemBox) return;
-  itemBox.style.setProperty('transition', 'transform .15s ease, box-shadow .15s ease', 'important');
-  itemBox.style.setProperty('transform', 'scale(1.05)', 'important');
-  itemBox.style.setProperty('box-shadow', '0 10px 26px rgba(21,39,68,.18)', 'important');
-  setTimeout(function(){
-    itemBox.style.setProperty('transform', 'scale(1)', 'important');
-    itemBox.style.setProperty('box-shadow', 'none', 'important');
-  }, 220);
-});
+
+
 
 </script>
 </body>
