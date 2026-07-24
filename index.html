@@ -4137,16 +4137,16 @@ body.subOpen main.mobile{display:none}
 .hero[data-home]{cursor:pointer;-webkit-tap-highlight-color:transparent;}
 [id^="subPage"] .baItem,[id^="subPage"] .equip-photo,[id^="subPage"] figure.ba-photo,[id^="subPage"] figure.ba-photo img,[id^="subPage"] .ba-cell,.baGrid .baItem{
   box-shadow:none!important;
-  transition:transform .15s ease,box-shadow .15s ease!important;
+  transition:transform .3s ease,box-shadow .3s ease!important;
   -webkit-tap-highlight-color:transparent;
 }
-[id^="subPage"] .baItem.imgPress,[id^="subPage"] .equip-photo.imgPress,[id^="subPage"] .ba-cell.imgPress,.baGrid .baItem.imgPress{
+[id^="subPage"] .baItem:active,[id^="subPage"] .equip-photo:active,[id^="subPage"] .ba-cell:active,.baGrid .baItem:active{
   transform:scale(1.12)!important;
   box-shadow:0 10px 26px rgba(21,39,68,.28)!important;
   position:relative;
   z-index:5;
 }
-[id^="subPage"] figure.ba-photo.imgPress img{
+[id^="subPage"] figure.ba-photo:active img{
   transform:scale(1.12)!important;
   box-shadow:0 10px 26px rgba(21,39,68,.28)!important;
   position:relative;
@@ -4386,22 +4386,6 @@ body.subOpen main.mobile{display:none}
 
 <script>
 document.addEventListener('touchstart', function(){}, {passive:true});
-(function(){
-  var sel = '[id^="subPage"] .baItem,[id^="subPage"] .equip-photo,[id^="subPage"] figure.ba-photo,[id^="subPage"] .ba-cell,.baGrid .baItem';
-  function press(e){
-    var el = e.target.closest(sel);
-    if(el) el.classList.add('imgPress');
-  }
-  function release(){
-    document.querySelectorAll('.imgPress').forEach(function(el){ el.classList.remove('imgPress'); });
-  }
-  document.addEventListener('touchstart', press, {passive:true});
-  document.addEventListener('touchend', release, {passive:true});
-  document.addEventListener('touchcancel', release, {passive:true});
-  document.addEventListener('mousedown', press);
-  document.addEventListener('mouseup', release);
-  document.addEventListener('mouseleave', release);
-})();
 const observer = new IntersectionObserver((entries)=>{
   entries.forEach(entry=>{
     if(entry.isIntersecting) entry.target.classList.add('show');
