@@ -4331,6 +4331,13 @@ body.subOpen main.mobile{display:none}
     <span class="welcomeQMark">“</span>
     <span class="welcomeBrand">CARGLASS</span>
     <p class="welcomeText">자동차유리복원에 오신 것을<br>환영합니다.</p>
+    <div class="runningDogWrap">
+      <svg class="carTrailSvg" viewBox="0 0 300 14" preserveAspectRatio="none">
+        <path pathLength="100" d="M4,7 L26,6.3 L48,7.4 L70,6.6 L92,7.2 L114,6.4 L136,7.3 L158,6.5 L180,7.1 L202,6.3 L224,7.4 L246,6.6 L268,7.2 L296,6.8" stroke="#c9a862" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+      </svg>
+      <span class="carLetter carLetter1">C</span><span class="carLetter carLetter2">A</span><span class="carLetter carLetter3">R</span><span class="carLetter carLetter4">G</span><span class="carLetter carLetter5">L</span><span class="carLetter carLetter6">A</span><span class="carLetter carLetter7">S</span><span class="carLetter carLetter8">S</span>
+      <span class="runningDog">🚗</span>
+    </div>
   </div>
   <div class="qBox">
     <div class="baHeadBox qHeadBox qHeadBoxMain"><span class="qMark">“</span><p class="baSub">궁금한 항목을 눌러보세요</p><h2>유리복원 궁금증, 여기서 다 풀립니다.</h2></div>
@@ -6669,6 +6676,83 @@ document.addEventListener('click', function(e){
 .qBtn.qBtnPink[data-open]{animation:qBtnPinkBlink 10s ease-in-out infinite!important;}
 
 #subPage .free,#subPage2 .free,#subPage3 .free,#subPage4 .free,#subPage5 .free,#subPage6 .free,#subPage7 .free,#subPage8 .free,#subPage9 .free,#subPage10 .free,#subPage11 .free,#subPage12 .free,#subPage13 .free,#subPage14 .free,#subPage15 .free{margin-top:19px!important;}
+
+.welcomeWrap{position:relative;overflow:hidden;}
+.welcomeBrand,.welcomeQMark{animation:welcomeColorShift 3.5s ease-in-out infinite;}
+@keyframes welcomeColorShift{
+  0%,10%{color:#b08d4d;}
+  25%{color:#f0951e;}
+  40%,100%{color:#b08d4d;}
+}
+.welcomeWrap::after{
+  content:"";
+  position:absolute;
+  top:0;left:-60%;
+  width:40%;height:100%;
+  background:linear-gradient(115deg,transparent 0%,rgba(255,255,255,.65) 50%,transparent 100%);
+  animation:welcomeShine 3.5s ease-in-out infinite;
+  pointer-events:none;
+}
+@keyframes welcomeShine{
+  0%{left:-60%;}
+  55%{left:130%;}
+  100%{left:130%;}
+}
+
+.runningDogWrap{position:relative;height:34px;margin-top:30px;overflow:hidden;}
+.carTrailSvg{position:absolute;left:0;bottom:4px;width:100%;height:14px;overflow:visible;}
+.carTrailSvg path{
+  stroke-dasharray:100;
+  stroke-dashoffset:100;
+  animation:roadTrail 11.5s linear infinite;
+  opacity:.55;
+}
+@keyframes roadTrail{
+  0%{stroke-dashoffset:100;}
+  69.6%{stroke-dashoffset:0;}
+  100%{stroke-dashoffset:0;}
+}
+.runningDog{
+  position:absolute;
+  left:-15%;
+  top:0;
+  font-size:26px;
+  animation:dogRun 11.5s linear infinite;
+  display:inline-block;
+  filter:grayscale(1) brightness(2.2) contrast(.7);opacity:.75;
+}
+@keyframes dogRun{
+  0%{left:-15%;transform:scaleX(-1) translateY(0);}
+  35%{transform:scaleX(-1) translateY(-0.4px);}
+  69.6%{left:105%;transform:scaleX(-1) translateY(0);}
+  100%{left:105%;transform:scaleX(-1) translateY(0);}
+}
+
+.carLetter{position:absolute;bottom:10px;font-size:18px;font-weight:800;color:#d9ad5f;letter-spacing:0;opacity:0;white-space:nowrap;}
+.carLetter1{left:10.0%;animation:letterFade1 11.5s linear infinite;}
+@keyframes letterFade1{0%,13.77%{opacity:0;}14.47%,100%{opacity:1;}}
+.carLetter2{left:21.0%;animation:letterFade2 11.5s linear infinite;}
+@keyframes letterFade2{0%,20.17%{opacity:0;}20.87%,100%{opacity:1;}}
+.carLetter3{left:32.0%;animation:letterFade3 11.5s linear infinite;}
+@keyframes letterFade3{0%,26.57%{opacity:0;}27.27%,100%{opacity:1;}}
+.carLetter4{left:43.0%;animation:letterFade4 11.5s linear infinite;}
+@keyframes letterFade4{0%,32.90%{opacity:0;}33.60%,100%{opacity:1;}}
+.carLetter5{left:54.0%;animation:letterFade5 11.5s linear infinite;}
+@keyframes letterFade5{0%,39.30%{opacity:0;}40.00%,100%{opacity:1;}}
+.carLetter6{left:65.0%;animation:letterFade6 11.5s linear infinite;}
+@keyframes letterFade6{0%,45.70%{opacity:0;}46.40%,100%{opacity:1;}}
+.carLetter7{left:76.0%;animation:letterFade7 11.5s linear infinite;}
+@keyframes letterFade7{0%,52.03%{opacity:0;}52.73%,100%{opacity:1;}}
+.carLetter8{left:87.0%;animation:letterFade8 11.5s linear infinite;}
+@keyframes letterFade8{0%,58.43%{opacity:0;}59.13%,100%{opacity:1;}}
+}
+}
+}
+}
+}
+}
+}
+}
 </style>
 <script>
 (function(){
