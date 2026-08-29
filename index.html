@@ -47,7 +47,7 @@ img{max-width:100%;display:block;}
 a{-webkit-tap-highlight-color:transparent}
 .mobile{max-width:430px;margin:0 auto;background:#DCE3EA;min-height:100vh;box-shadow:0 0 30px rgba(0,0,0,.16);padding-bottom:82px;position:relative;}
 @media (orientation:landscape) and (max-width:1023px){.mobile{max-width:100%!important;box-shadow:none;}
-.hero{min-height:900px!important;background-position:center top -260px!important;}
+.hero{min-height:1150px!important;background-position:center top!important;}
 }
 .top{position:sticky;top:0;z-index:50;height:62px;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);display:flex;align-items:center;justify-content:space-between;padding:9px 14px;border-bottom:1px solid #e4ebf3}
 .logo{display:flex;align-items:center;gap:8px}
@@ -802,10 +802,10 @@ background:linear-gradient(135deg,#184f8d,#2f73c0)!important;
   background-size:100% auto!important;
 }
 @media (min-width:1024px){
-  .hero{background-position:center top -260px!important;}
+  .hero{background-position:center top!important;padding-top:80px!important;}
 }
 @media (orientation:landscape) and (max-width:1023px){
-  .hero{background-position:center top -260px!important;}
+  .hero{background-position:center top!important;padding-top:80px!important;}
 }
 .hero:after{
   display:none!important;
@@ -2465,6 +2465,12 @@ section.simpleSteps .sub{
   inset:-1px;
   background:radial-gradient(circle at 50% 0%,rgba(82,154,255,.22),transparent 45%);
   pointer-events:none;
+}
+@media (min-width:1024px){
+  .hero .premiumWarrantyBox{margin-top:320px!important;}
+}
+@media (orientation:landscape) and (max-width:1023px){
+  .hero .premiumWarrantyBox{margin-top:320px!important;}
 }
 .hero .premiumWarrantyBox > *{
   position:relative;
@@ -4150,7 +4156,7 @@ body.subOpen main.mobile{display:none}
   [id^="subPage"] .nav{max-width:650px!important;left:auto!important;right:auto!important;transform:none!important;margin:0 auto!important;}
   [id^="subPage"] .wrap{max-width:100%!important;}
   .top{max-width:650px!important;}
-  .hero{min-height:900px!important;background-position:center top -260px!important;}
+  .hero{min-height:1150px!important;background-position:center top!important;}
 }
 
 .free{cursor:pointer;-webkit-tap-highlight-color:transparent;}
